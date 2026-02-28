@@ -7,7 +7,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* ── ROOT ── */
 :root {
   --bg:#0d1117;--card:#161b22;--card2:#1c2330;--border:#21262d;
   --nine:#58a6ff;--nine-bg:rgba(88,166,255,.08);
@@ -20,13 +19,9 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:"Inter",-apple-system,sans-serif;font-size:14px;line-height:1.6}
-
-/* ── TOP BAR ── */
 .topbar{position:sticky;top:0;z-index:200;background:rgba(13,17,23,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 32px;height:52px;display:flex;align-items:center;justify-content:space-between}
 .tb-brand{font-size:14px;font-weight:700;color:var(--nine)}
 .tb-meta{font-size:11px;color:var(--dim)}
-
-/* ── TABS ── */
 .tabs{display:flex;background:var(--card);border-bottom:1px solid var(--border);overflow-x:auto;-webkit-overflow-scrolling:touch}
 .tabs::-webkit-scrollbar{height:0}
 .tab-btn{display:flex;align-items:center;gap:12px;padding:12px 24px;border:none;background:transparent;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap;flex-shrink:0}
@@ -43,12 +38,7 @@ body{background:var(--bg);color:var(--text);font-family:"Inter",-apple-system,sa
 .tab-btn[data-tab="layer2"].active{border-bottom-color:var(--purple)}
 .tab-btn[data-tab="layer3"].active{border-bottom-color:var(--gold)}
 .tab-btn[data-tab="layer4"].active{border-bottom-color:var(--green)}
-
-/* ── LAYER CONTENT ── */
 .layer-panel{min-height:80vh}
-
-/* ── LAYER STYLES ── */
-
 
 /* ── layer1 scoped ── */
 :root{
@@ -307,8 +297,6 @@ html{ scroll-behavior:smooth; }
 #panel-layer1 .nl-sep{color:var(--dim);font-size:10px}
 
 
-
-
 /* ── layer2 scoped ── */
 :root{
     --bg:#0d1117; --card:#161b22; --card2:#1c2330; --border:#21262d;
@@ -435,8 +423,6 @@ html{scroll-behavior:smooth}
 #panel-layer2 .nl:hover{border-color:var(--nine);color:var(--nine)}
 #panel-layer2 .nl.active{background:var(--nine-bg);color:var(--nine);border-color:rgba(88,166,255,.3)}
 #panel-layer2 .nl-sep{color:var(--dim);font-size:10px}
-
-
 
 
 /* ── layer3 scoped ── */
@@ -567,8 +553,6 @@ html{scroll-behavior:smooth}
 #panel-layer3 .nl-sep{color:var(--dim);font-size:10px}
 
 
-
-
 /* ── layer4 scoped ── */
 :root{
     --bg:#0d1117;--card:#161b22;--card2:#1c2330;--border:#21262d;
@@ -660,22 +644,19 @@ html{scroll-behavior:smooth}
     .nav{padding:0 20px}
     .nav-layers{display:none}
   }
-#panel-layer4 /* ── SCROLLBAR ── */
-::-webkit-scrollbar{width:5px;height:5px}
-#panel-layer4 ::-webkit-scrollbar-track{background:var(--bg)}
-#panel-layer4 ::-webkit-scrollbar-thumb{background:#30363d;border-radius:3px}
 
+
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:#30363d;border-radius:3px}
 </style>
 </head>
 <body>
-
 <div class="topbar">
   <span class="tb-brand">Alba Dental · Nine Program</span>
   <span class="tb-meta">Jan 2024 – Feb 2026 · 5,453 patients · 591 Nine subscribers</span>
 </div>
-
-<div class="tabs">
-  <button class="tab-btn active" data-tab="layer1" onclick="switchTab('layer1')">
+<div class="tabs"><button class="tab-btn active" data-tab="layer1" onclick="switchTab('layer1')">
         <span class="tab-icon">📊</span>
         <div class="tab-text">
           <span class="tab-num" style="color:var(--nine)">01</span>
@@ -703,11 +684,8 @@ html{scroll-behavior:smooth}
           <span class="tab-label">Layer 4 · Strategy</span>
           <span class="tab-sub">2026 Action Plan</span>
         </div>
-      </button>
-</div>
-
-<div id="content">
-<div id="panel-layer1" class="layer-panel" style="display:block">
+      </button></div>
+<div id="content"><div id="panel-layer1" class="layer-panel" style="display:block">
 <!-- NAV -->
 
 
@@ -833,7 +811,7 @@ html{scroll-behavior:smooth}
   </div>
 
   <div class="insight blue">
-    <strong>Key finding:</strong> Nine co-pay revenue grew from near zero in 2024 to 392K SAR in Jan-26, representing 70.8% of that month's total revenue. Meanwhile regular patient revenue has been declining since Oct-25 — from 255K to 132K SAR. This reflects the natural shift as the subscriber base grows: more clinic activity comes from Nine members pursuing cosmetic procedures. <strong>Regular treatment revenue decline is expected and healthy as long as Nine subscriber growth continues.</strong>
+    <strong>Key finding:</strong> Nine co-pay revenue grew from near zero in 2024 to 392K SAR in Jan-26, representing 70.8% of that month's total revenue. Meanwhile regular patient revenue has been declining since Oct-25 — from 255K to 132K SAR. This reflects the natural shift as the subscriber base grows: more clinic activity comes from Nine members pursuing cosmetic procedures. <strong>This is expected — but must be watched. The decline in regular revenue is currently more than offset by Nine co-pay growth, keeping total revenue healthy. If Nine subscriber growth slows, regular revenue decline becomes a risk.</strong>
   </div>
 </div>
 
@@ -864,8 +842,8 @@ html{scroll-behavior:smooth}
     </div>
     <div class="kpi red">
       <div class="kpi-label">At 4,000 Subscribers</div>
-      <div class="kpi-value c-red">2,433</div>
-      <div class="kpi-sub">Nine appts needed per month · 2× current capacity</div>
+      <div class="kpi-value c-nine">~1,600</div>
+      <div class="kpi-sub">expected Nine visits/month at 4,000 subs · 40% engagement rate</div>
     </div>
   </div>
 
@@ -880,7 +858,7 @@ html{scroll-behavior:smooth}
   </div>
 
   <div class="insight gold">
-    <strong>Capacity alert:</strong> Nine subscribers visit 3.3× more frequently than regular patients. At 4,000 subscribers, Nine appointments alone would reach ~2,433/month — more than double current total clinic capacity of 1,037/month. <strong>Growing the subscriber base without a parallel capacity expansion plan will create a bottleneck. This must be part of the 2026 strategy.</strong>
+    <strong>Capacity note:</strong> Nine subscribers visit 3.3× more frequently than regular patients on average. However, Nine works like an insurance model — only ~40% of subscribers visit in any given month. At 4,000 subscribers, expected monthly Nine visits are approximately 1,600 (4,000 × 40%) — a significant increase from today but manageable with planned capacity growth. The 2,433 figure above assumes all subscribers visit every month, which the data shows does not happen.
   </div>
 </div>
 
@@ -1423,7 +1401,7 @@ html{scroll-behavior:smooth}
   </div>
 
   <div class="insight blue">
-    <strong>2025 was the year Nine became real.</strong> Revenue grew 150.6% and appointments grew 150.1% — both more than doubling. But the most significant number is the Nine conversion rate: from 1.4% in 2024 to 14.2% in 2025. This is a 10× improvement that signals the offer, the pitch, and patient awareness all matured significantly. <strong>2026 must sustain and accelerate this conversion rate while solving the capacity challenge that comes with a growing subscriber base.</strong>
+    <strong>2025 was the year Nine became real.</strong> Revenue grew 150.6% and appointments grew 150.1% — both more than doubling. But the most significant number is the Nine conversion rate: from 1.4% in 2024 to 14.2% in 2025. This is a 10× improvement that signals the offer, the pitch, and patient awareness all matured significantly. <strong>2026 must sustain and accelerate this conversion rate. Nine works like an insurance model — not all subscribers visit every month — so growing the subscriber base does not create a linear capacity problem.</strong>
   </div>
 </div>
 </div>
@@ -2195,9 +2173,7 @@ html{scroll-behavior:smooth}
   </div>
 </div>
 </div>
-
 </div>
-
 <script>
 
 function init_layer1() {
@@ -2616,18 +2592,14 @@ new Chart(document.getElementById("layer4_cGrowth"),{
   } catch(e) { console.error("Layer 4 · Strategy init error:", e); }
 }
 
-
 window._initialized = {};
 document.addEventListener("DOMContentLoaded", function() { init_layer1(); });
-
-
 function switchTab(id) {
   document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
   document.querySelectorAll(".layer-panel").forEach(p => p.style.display = "none");
   document.querySelector("[data-tab=" + id + "]").classList.add("active");
   document.getElementById("panel-" + id).style.display = "block";
   window.scrollTo({top:0,behavior:"smooth"});
-  // Init charts for this layer on first view
   const initFn = window["init_" + id];
   if (initFn) initFn();
 }
