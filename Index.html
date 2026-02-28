@@ -1,0 +1,2636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alba Dental · Nine Program · Full Analysis</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── ROOT ── */
+:root {
+  --bg:#0d1117;--card:#161b22;--card2:#1c2330;--border:#21262d;
+  --nine:#58a6ff;--nine-bg:rgba(88,166,255,.08);
+  --gold:#e3b341;--gold-bg:rgba(227,179,65,.08);
+  --green:#3fb950;--green-bg:rgba(63,185,80,.08);
+  --red:#f85149;--red-bg:rgba(248,81,73,.08);
+  --purple:#bc8cff;--purple-bg:rgba(188,140,255,.08);
+  --text:#e6edf3;--text2:#c9d1d9;--muted:#8b949e;--dim:#6e7681;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:"Inter",-apple-system,sans-serif;font-size:14px;line-height:1.6}
+
+/* ── TOP BAR ── */
+.topbar{position:sticky;top:0;z-index:200;background:rgba(13,17,23,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 32px;height:52px;display:flex;align-items:center;justify-content:space-between}
+.tb-brand{font-size:14px;font-weight:700;color:var(--nine)}
+.tb-meta{font-size:11px;color:var(--dim)}
+
+/* ── TABS ── */
+.tabs{display:flex;background:var(--card);border-bottom:1px solid var(--border);overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tabs::-webkit-scrollbar{height:0}
+.tab-btn{display:flex;align-items:center;gap:12px;padding:12px 24px;border:none;background:transparent;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.tab-btn:hover{background:rgba(255,255,255,.03)}
+.tab-btn.active{background:rgba(255,255,255,.02)}
+.tab-icon{font-size:18px;opacity:.7}
+.tab-btn.active .tab-icon{opacity:1}
+.tab-text{display:flex;flex-direction:column;align-items:flex-start;gap:1px}
+.tab-num{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.tab-label{font-size:12px;font-weight:600;color:var(--muted);transition:color .2s;line-height:1.2}
+.tab-btn.active .tab-label{color:var(--text)}
+.tab-sub{font-size:10px;color:var(--dim);line-height:1.2}
+.tab-btn[data-tab="layer1"].active{border-bottom-color:var(--nine)}
+.tab-btn[data-tab="layer2"].active{border-bottom-color:var(--purple)}
+.tab-btn[data-tab="layer3"].active{border-bottom-color:var(--gold)}
+.tab-btn[data-tab="layer4"].active{border-bottom-color:var(--green)}
+
+/* ── LAYER CONTENT ── */
+.layer-panel{min-height:80vh}
+
+/* ── LAYER STYLES ── */
+
+
+/* ── layer1 scoped ── */
+:root{
+    --bg:       #0d1117;
+    --card:     #161b22;
+    --card2:    #1c2330;
+    --border:   #21262d;
+    --nine:     #58a6ff;
+    --nine-bg:  rgba(88,166,255,0.08);
+    --gold:     #e3b341;
+    --gold-bg:  rgba(227,179,65,0.08);
+    --green:    #3fb950;
+    --green-bg: rgba(63,185,80,0.08);
+    --red:      #f85149;
+    --red-bg:   rgba(248,81,73,0.08);
+    --purple:   #bc8cff;
+    --text:     #e6edf3;
+    --text2:    #c9d1d9;
+    --muted:    #8b949e;
+    --dim:      #6e7681;
+  }
+#panel-layer1 *{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+#panel-layer1 body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+#panel-layer1 /* ── NAV ── */
+  .nav{
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(13,17,23,0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center;
+    justify-content: space-between;
+    padding: 0 40px; height: 50px;
+  }
+#panel-layer1 .nav-brand{ font-weight: 700; font-size: 14px; color: var(--nine); }
+#panel-layer1 .nav-links{ display: flex; gap: 24px; }
+#panel-layer1 .nav-links a{
+    font-size: 12px; color: var(--muted);
+    text-decoration: none; transition: color .2s;
+  }
+#panel-layer1 .nav-links a:hover{ color: var(--nine); }
+#panel-layer1 .nav-badge{
+    font-size: 11px; font-weight: 500;
+    background: var(--green-bg); color: var(--green);
+    border: 1px solid rgba(63,185,80,0.3);
+    padding: 3px 10px; border-radius: 20px;
+  }
+#panel-layer1 /* ── HEADER ── */
+  .header{
+    padding: 48px 40px 36px;
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px; align-items: start;
+  }
+#panel-layer1 .header-label{
+    font-size: 12px; font-weight: 500;
+    color: var(--nine); letter-spacing: .05em;
+    text-transform: uppercase; margin-bottom: 10px;
+  }
+#panel-layer1 .header-title{
+    font-size: 36px; font-weight: 700;
+    line-height: 1.15; color: var(--text);
+    margin-bottom: 12px;
+  }
+#panel-layer1 .header-title span{ color: var(--nine); }
+#panel-layer1 .header-desc{
+    font-size: 13px; color: var(--muted);
+    line-height: 1.7; max-width: 560px;
+  }
+#panel-layer1 .header-meta{ text-align: right; }
+#panel-layer1 .meta-row{ font-size: 12px; color: var(--muted); line-height: 2.1; }
+#panel-layer1 .meta-row strong{ color: var(--text2); font-weight: 500; }
+#panel-layer1 .validated{
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 10px; padding: 4px 12px; border-radius: 20px;
+    background: var(--green-bg); border: 1px solid rgba(63,185,80,0.25);
+    font-size: 11px; font-weight: 500; color: var(--green);
+  }
+#panel-layer1 .pulse{ width:7px; height:7px; border-radius:50%; background:var(--green); animation: pulse 2s infinite; }
+@keyframes pulse{ 0%,100%{opacity:1} 50%{opacity:.3} }
+#panel-layer1 /* ── GOAL BANNER ── */
+  .goal-banner{
+    margin: 28px 40px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--nine);
+    border-radius: 10px;
+    padding: 24px 32px;
+  }
+#panel-layer1 .goal-top{
+    display: flex; align-items: center;
+    gap: 36px; flex-wrap: wrap; margin-bottom: 20px;
+  }
+#panel-layer1 .g-item{ }
+#panel-layer1 .g-label{
+    font-size: 11px; font-weight: 500; text-transform: uppercase;
+    letter-spacing: .08em; color: var(--muted); margin-bottom: 4px;
+  }
+#panel-layer1 .g-value{ font-size: 30px; font-weight: 700; line-height: 1; }
+#panel-layer1 .g-sub{ font-size: 11px; color: var(--muted); margin-top: 3px; }
+#panel-layer1 .g-div{ width:1px; height:48px; background:var(--border); flex-shrink:0; }
+#panel-layer1 .g-progress{ flex: 1; min-width: 200px; }
+#panel-layer1 .prog-labels{
+    display: flex; justify-content: space-between;
+    font-size: 11px; color: var(--muted); margin-bottom: 6px;
+  }
+#panel-layer1 .prog-track{
+    background: rgba(255,255,255,0.06);
+    height: 8px; border-radius: 99px; overflow: hidden;
+  }
+#panel-layer1 .prog-fill{
+    height: 100%; border-radius: 99px;
+    background: linear-gradient(90deg, var(--nine), var(--purple));
+    transition: width 1.6s cubic-bezier(.4,0,.2,1);
+  }
+#panel-layer1 .goal-alert{
+    background: var(--card2); border: 1px solid var(--border);
+    border-left: 3px solid var(--red);
+    border-radius: 6px; padding: 12px 16px;
+    font-size: 13px; color: var(--muted); line-height: 1.65;
+  }
+#panel-layer1 .goal-alert strong{ color: var(--text2); font-weight: 600; }
+#panel-layer1 /* ── SECTION ── */
+  .section{ padding: 40px; border-bottom: 1px solid var(--border); }
+#panel-layer1 .section-head{
+    display: flex; align-items: center;
+    gap: 12px; margin-bottom: 24px;
+  }
+#panel-layer1 .s-num{
+    font-size: 11px; font-weight: 600;
+    background: var(--nine-bg); color: var(--nine);
+    border: 1px solid rgba(88,166,255,.2);
+    padding: 2px 9px; border-radius: 20px;
+    letter-spacing: .06em;
+  }
+#panel-layer1 .s-title{ font-size: 18px; font-weight: 600; color: var(--text); }
+#panel-layer1 /* ── KPI GRID ── */
+  .kpi-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(175px,1fr));
+    gap: 12px; margin-bottom: 24px;
+  }
+#panel-layer1 .kpi{
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 8px; padding: 18px 20px;
+    position: relative; overflow: hidden;
+    transition: border-color .2s;
+  }
+#panel-layer1 .kpi:hover{ border-color: rgba(88,166,255,.3); }
+#panel-layer1 .kpi::after{
+    content:''; position:absolute;
+    top:0; left:0; right:0; height:2px;
+    border-radius:8px 8px 0 0;
+  }
+#panel-layer1 .kpi.blue::after{ background: var(--nine); }
+#panel-layer1 .kpi.gold::after{ background: var(--gold); }
+#panel-layer1 .kpi.green::after{ background: var(--green); }
+#panel-layer1 .kpi.red::after{ background: var(--red); }
+#panel-layer1 .kpi.purple::after{ background: var(--purple); }
+#panel-layer1 .kpi-label{
+    font-size: 11px; font-weight: 500; text-transform: uppercase;
+    letter-spacing: .07em; color: var(--muted); margin-bottom: 8px;
+  }
+#panel-layer1 .kpi-value{ font-size: 26px; font-weight: 700; line-height: 1; }
+#panel-layer1 .kpi-sub{ font-size: 11px; color: var(--muted); margin-top: 5px; }
+#panel-layer1 .c-nine{ color: var(--nine); }
+#panel-layer1 .c-gold{ color: var(--gold); }
+#panel-layer1 .c-green{ color: var(--green); }
+#panel-layer1 .c-red{ color: var(--red); }
+#panel-layer1 .c-purple{ color: var(--purple); }
+#panel-layer1 /* ── CHART CARD ── */
+  .chart-card{
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 8px; padding: 20px 22px; margin-bottom: 14px;
+  }
+#panel-layer1 .cc-title{ font-size: 13px; font-weight: 600; color: var(--text2); margin-bottom: 3px; }
+#panel-layer1 .cc-sub{ font-size: 11px; color: var(--muted); margin-bottom: 18px; }
+#panel-layer1 canvas{ max-height: 260px; }
+#panel-layer1 .grid-2{ display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+#panel-layer1 /* ── LEGEND ── */
+  .legend{ display:flex; gap:16px; flex-wrap:wrap; margin-bottom:12px; }
+#panel-layer1 .leg{ display:flex; align-items:center; gap:6px; font-size:12px; color:var(--muted); }
+#panel-layer1 .leg-dot{ width:10px; height:10px; border-radius:2px; flex-shrink:0; }
+#panel-layer1 /* ── INSIGHT BOX ── */
+  .insight{
+    margin-top: 14px; padding: 14px 18px;
+    border-radius: 6px; font-size: 13px;
+    color: var(--muted); line-height: 1.7;
+  }
+#panel-layer1 .insight.blue{ background:var(--nine-bg);  border-left:3px solid var(--nine); }
+#panel-layer1 .insight.gold{ background:var(--gold-bg);  border-left:3px solid var(--gold); }
+#panel-layer1 .insight.red{ background:var(--red-bg);   border-left:3px solid var(--red); }
+#panel-layer1 .insight strong{ color: var(--text2); font-weight: 600; }
+#panel-layer1 /* ── TABLE ── */
+  .tbl-wrap{
+    overflow-x: auto;
+    border: 1px solid var(--border); border-radius: 8px;
+  }
+#panel-layer1 table{ width:100%; border-collapse:collapse; font-size:12px; }
+#panel-layer1 th{
+    background: var(--card2); padding: 10px 14px;
+    font-size: 10px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: .07em; color: var(--muted);
+    border-bottom: 1px solid var(--border);
+    text-align: right; white-space: nowrap;
+  }
+#panel-layer1 th:first-child{ text-align: left; }
+#panel-layer1 td{
+    padding: 9px 14px; font-size: 12px;
+    border-bottom: 1px solid rgba(33,38,45,0.7);
+    text-align: right; white-space: nowrap;
+    color: var(--text2);
+  }
+#panel-layer1 td:first-child{ text-align:left; font-weight:600; color:var(--nine); }
+#panel-layer1 tr:last-child td{ border-bottom:none; }
+#panel-layer1 tr:hover td{ background:var(--card2); }
+#panel-layer1 .t-nine{ color: var(--nine) !important; }
+#panel-layer1 .t-gold{ color: var(--gold) !important; }
+#panel-layer1 .t-green{ color: var(--green) !important; }
+#panel-layer1 .t-red{ color: var(--red) !important; }
+#panel-layer1 .t-muted{ color: var(--dim) !important; }
+#panel-layer1 .badge{
+    display:inline-block; padding:2px 8px;
+    border-radius:20px; font-size:10px; font-weight:600;
+  }
+#panel-layer1 .b-high{ background:rgba(63,185,80,.15);  color:var(--green); }
+#panel-layer1 .b-med{ background:rgba(227,179,65,.15); color:var(--gold); }
+#panel-layer1 .b-low{ background:rgba(110,118,129,.1); color:var(--muted); }
+#panel-layer1 /* ── FOOTER ── */
+  footer{
+    padding: 24px 40px;
+    display: flex; justify-content:space-between;
+    flex-wrap: wrap; gap: 8px;
+  }
+#panel-layer1 footer span{ font-size: 11px; color: var(--dim); }
+@media(max-width:768px){
+    .header,.section,.goal-banner{ padding-left:20px; padding-right:20px; }
+    .goal-banner{ margin-left:20px; margin-right:20px; }
+    .grid-2{ grid-template-columns:1fr; }
+    .header{ grid-template-columns:1fr; }
+    .header-title{ font-size:26px; }
+    .nav{ padding:0 20px; }
+    .nav-links{ display:none; }
+  }
+#panel-layer1 .nav-layers{display:flex;gap:6px;align-items:center}
+#panel-layer1 .nl{font-size:11px;font-weight:500;padding:4px 12px;border-radius:20px;text-decoration:none;transition:all .2s;border:1px solid var(--border);color:var(--muted)}
+#panel-layer1 .nl:hover{border-color:var(--nine);color:var(--nine)}
+#panel-layer1 .nl.active{background:var(--nine-bg);color:var(--nine);border-color:rgba(88,166,255,.3)}
+#panel-layer1 .nl-sep{color:var(--dim);font-size:10px}
+
+
+
+
+/* ── layer2 scoped ── */
+:root{
+    --bg:#0d1117; --card:#161b22; --card2:#1c2330; --border:#21262d;
+    --nine:#58a6ff; --nine-bg:rgba(88,166,255,.08); --nine-glow:rgba(88,166,255,.2);
+    --gold:#e3b341; --gold-bg:rgba(227,179,65,.08);
+    --green:#3fb950; --green-bg:rgba(63,185,80,.08);
+    --red:#f85149; --red-bg:rgba(248,81,73,.08);
+    --purple:#bc8cff; --purple-bg:rgba(188,140,255,.08);
+    --teal:#39d353; --orange:#f0883e;
+    --text:#e6edf3; --text2:#c9d1d9; --muted:#8b949e; --dim:#6e7681;
+  }
+#panel-layer2 *{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+#panel-layer2 body{background:var(--bg);color:var(--text);font-family:'Inter',-apple-system,sans-serif;font-size:14px;line-height:1.6}
+#panel-layer2 /* NAV */
+  .nav{position:sticky;top:0;z-index:100;background:rgba(13,17,23,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:50px}
+#panel-layer2 .nav-brand{font-weight:700;font-size:14px;color:var(--nine)}
+#panel-layer2 .nav-links{display:flex;gap:22px}
+#panel-layer2 .nav-links a{font-size:11px;color:var(--muted);text-decoration:none;transition:color .2s}
+#panel-layer2 .nav-links a:hover{color:var(--nine)}
+#panel-layer2 .nav-badge{font-size:11px;font-weight:500;background:var(--nine-bg);color:var(--nine);border:1px solid rgba(88,166,255,.25);padding:3px 10px;border-radius:20px}
+#panel-layer2 /* HEADER */
+  .header{padding:48px 40px 36px;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr auto;gap:40px;align-items:start}
+#panel-layer2 .h-label{font-size:12px;font-weight:500;color:var(--nine);letter-spacing:.05em;text-transform:uppercase;margin-bottom:10px}
+#panel-layer2 .h-title{font-size:34px;font-weight:700;line-height:1.15;margin-bottom:12px}
+#panel-layer2 .h-title span{color:var(--nine)}
+#panel-layer2 .h-desc{font-size:13px;color:var(--muted);line-height:1.7;max-width:560px}
+#panel-layer2 .h-meta{text-align:right}
+#panel-layer2 .meta-row{font-size:12px;color:var(--muted);line-height:2.1}
+#panel-layer2 .meta-row strong{color:var(--text2);font-weight:500}
+#panel-layer2 /* SECTION */
+  .section{padding:40px;border-bottom:1px solid var(--border)}
+#panel-layer2 .s-head{display:flex;align-items:center;gap:12px;margin-bottom:24px}
+#panel-layer2 .s-num{font-size:11px;font-weight:600;background:var(--nine-bg);color:var(--nine);border:1px solid rgba(88,166,255,.2);padding:2px 9px;border-radius:20px;letter-spacing:.06em}
+#panel-layer2 .s-title{font-size:18px;font-weight:600;color:var(--text)}
+#panel-layer2 /* KPI */
+  .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:12px;margin-bottom:24px}
+#panel-layer2 .kpi{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 20px;position:relative;overflow:hidden;transition:border-color .2s}
+#panel-layer2 .kpi:hover{border-color:rgba(88,166,255,.25)}
+#panel-layer2 .kpi::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;border-radius:8px 8px 0 0}
+#panel-layer2 .kpi.blue::after{background:var(--nine)}
+#panel-layer2 .kpi.gold::after{background:var(--gold)}
+#panel-layer2 .kpi.green::after{background:var(--green)}
+#panel-layer2 .kpi.red::after{background:var(--red)}
+#panel-layer2 .kpi.purple::after{background:var(--purple)}
+#panel-layer2 .kpi-l{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:8px}
+#panel-layer2 .kpi-v{font-size:26px;font-weight:700;line-height:1}
+#panel-layer2 .kpi-s{font-size:11px;color:var(--muted);margin-top:5px}
+#panel-layer2 .c-nine{color:var(--nine)}
+#panel-layer2 .c-gold{color:var(--gold)}
+#panel-layer2 .c-green{color:var(--green)}
+#panel-layer2 .c-red{color:var(--red)}
+#panel-layer2 .c-purple{color:var(--purple)}
+#panel-layer2 /* CHART CARD */
+  .cc{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:20px 22px;margin-bottom:14px}
+#panel-layer2 .cc-t{font-size:13px;font-weight:600;color:var(--text2);margin-bottom:3px}
+#panel-layer2 .cc-s{font-size:11px;color:var(--muted);margin-bottom:18px}
+#panel-layer2 canvas{max-height:260px}
+#panel-layer2 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+#panel-layer2 .grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+#panel-layer2 /* INSIGHT */
+  .insight{margin-top:14px;padding:14px 18px;border-radius:6px;font-size:13px;color:var(--muted);line-height:1.7}
+#panel-layer2 .insight.blue{background:var(--nine-bg);border-left:3px solid var(--nine)}
+#panel-layer2 .insight.gold{background:var(--gold-bg);border-left:3px solid var(--gold)}
+#panel-layer2 .insight.green{background:var(--green-bg);border-left:3px solid var(--green)}
+#panel-layer2 .insight.red{background:var(--red-bg);border-left:3px solid var(--red)}
+#panel-layer2 .insight strong{color:var(--text2);font-weight:600}
+#panel-layer2 /* NOTE BOX */
+  .note{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:6px;padding:14px 18px;font-size:12px;color:var(--muted);line-height:1.75;margin-bottom:20px}
+#panel-layer2 .note strong{color:var(--gold);font-weight:600}
+#panel-layer2 /* LEGEND */
+  .legend{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:12px}
+#panel-layer2 .leg{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+#panel-layer2 .leg-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+#panel-layer2 /* GROUP COMPARISON CARDS */
+  .group-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
+#panel-layer2 .group-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:20px 22px}
+#panel-layer2 .group-card.a{border-top:3px solid var(--nine)}
+#panel-layer2 .group-card.b{border-top:3px solid var(--gold)}
+#panel-layer2 .group-card.c{border-top:3px solid var(--dim)}
+#panel-layer2 .gc-tag{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+#panel-layer2 .gc-name{font-size:16px;font-weight:700;margin-bottom:16px}
+#panel-layer2 .gc-row{display:flex;justify-content:space-between;align-items:baseline;padding:7px 0;border-bottom:1px solid var(--border);font-size:12px}
+#panel-layer2 .gc-row:last-child{border-bottom:none}
+#panel-layer2 .gc-label{color:var(--muted)}
+#panel-layer2 .gc-val{font-weight:600}
+#panel-layer2 /* TARGET TABLE */
+  .tbl-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:8px}
+#panel-layer2 table{width:100%;border-collapse:collapse;font-size:12px}
+#panel-layer2 th{background:var(--card2);padding:10px 14px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);border-bottom:1px solid var(--border);text-align:right;white-space:nowrap}
+#panel-layer2 th:first-child{text-align:left}
+#panel-layer2 td{padding:9px 14px;border-bottom:1px solid rgba(33,38,45,.7);text-align:right;white-space:nowrap;color:var(--text2)}
+#panel-layer2 td:first-child{text-align:left;font-weight:600;color:var(--nine)}
+#panel-layer2 tr:last-child td{border-bottom:none}
+#panel-layer2 tr:hover td{background:var(--card2)}
+#panel-layer2 .t-gold{color:var(--gold)!important}
+#panel-layer2 .t-green{color:var(--green)!important}
+#panel-layer2 .t-red{color:var(--red)!important}
+#panel-layer2 .t-muted{color:var(--dim)!important}
+#panel-layer2 .t-nine{color:var(--nine)!important}
+#panel-layer2 /* PRIORITY BADGE */
+  .pri{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:600}
+#panel-layer2 .pri-hot{background:rgba(248,81,73,.15);color:var(--red)}
+#panel-layer2 .pri-warm{background:rgba(227,179,65,.15);color:var(--gold)}
+#panel-layer2 .pri-cool{background:rgba(88,166,255,.15);color:var(--nine)}
+#panel-layer2 /* SEARCH */
+  .search-wrap{margin-bottom:14px;display:flex;gap:10px;align-items:center}
+#panel-layer2 .search-input{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:8px 14px;color:var(--text);font-size:12px;font-family:'Inter',sans-serif;width:280px;outline:none;transition:border-color .2s}
+#panel-layer2 .search-input:focus{border-color:var(--nine)}
+#panel-layer2 .search-input::placeholder{color:var(--dim)}
+#panel-layer2 .filter-count{font-size:12px;color:var(--muted)}
+#panel-layer2 footer{padding:24px 40px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+#panel-layer2 footer span{font-size:11px;color:var(--dim)}
+@media(max-width:900px){
+    .header,.section{padding-left:20px;padding-right:20px}
+    .grid-2,.grid-3,.group-cards{grid-template-columns:1fr}
+    .header{grid-template-columns:1fr}
+    .h-title{font-size:24px}
+    .nav{padding:0 20px}
+    .nav-links{display:none}
+  }
+#panel-layer2 .nav-layers{display:flex;gap:6px;align-items:center}
+#panel-layer2 .nl{font-size:11px;font-weight:500;padding:4px 12px;border-radius:20px;text-decoration:none;transition:all .2s;border:1px solid var(--border);color:var(--muted)}
+#panel-layer2 .nl:hover{border-color:var(--nine);color:var(--nine)}
+#panel-layer2 .nl.active{background:var(--nine-bg);color:var(--nine);border-color:rgba(88,166,255,.3)}
+#panel-layer2 .nl-sep{color:var(--dim);font-size:10px}
+
+
+
+
+/* ── layer3 scoped ── */
+:root{
+    --bg:#0d1117;--card:#161b22;--card2:#1c2330;--border:#21262d;
+    --nine:#58a6ff;--nine-bg:rgba(88,166,255,.08);
+    --gold:#e3b341;--gold-bg:rgba(227,179,65,.08);
+    --green:#3fb950;--green-bg:rgba(63,185,80,.08);
+    --red:#f85149;--red-bg:rgba(248,81,73,.08);
+    --purple:#bc8cff;--purple-bg:rgba(188,140,255,.08);
+    --text:#e6edf3;--text2:#c9d1d9;--muted:#8b949e;--dim:#6e7681;
+  }
+#panel-layer3 *{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+#panel-layer3 body{background:var(--bg);color:var(--text);font-family:'Inter',-apple-system,sans-serif;font-size:14px;line-height:1.6}
+#panel-layer3 .nav{position:sticky;top:0;z-index:100;background:rgba(13,17,23,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:50px}
+#panel-layer3 .nav-brand{font-weight:700;font-size:14px;color:var(--nine)}
+#panel-layer3 .nav-links{display:flex;gap:22px}
+#panel-layer3 .nav-links a{font-size:11px;color:var(--muted);text-decoration:none;transition:color .2s}
+#panel-layer3 .nav-links a:hover{color:var(--nine)}
+#panel-layer3 .nav-badge{font-size:11px;font-weight:500;background:var(--purple-bg);color:var(--purple);border:1px solid rgba(188,140,255,.25);padding:3px 10px;border-radius:20px}
+#panel-layer3 .header{padding:48px 40px 36px;border-bottom:1px solid var(--border)}
+#panel-layer3 .h-label{font-size:12px;font-weight:500;color:var(--purple);letter-spacing:.05em;text-transform:uppercase;margin-bottom:10px}
+#panel-layer3 .h-title{font-size:34px;font-weight:700;line-height:1.2;margin-bottom:16px}
+#panel-layer3 .h-title span{color:var(--purple)}
+#panel-layer3 /* THE KEY DISTINCTION BOX */
+  .distinction{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:0}
+#panel-layer3 .dist-side{padding:24px 28px}
+#panel-layer3 .dist-side.left{background:var(--card);border-right:1px solid var(--border)}
+#panel-layer3 .dist-side.right{background:var(--card2)}
+#panel-layer3 .dist-icon{font-size:24px;margin-bottom:10px}
+#panel-layer3 .dist-q{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px}
+#panel-layer3 .dist-title{font-size:16px;font-weight:700;margin-bottom:10px}
+#panel-layer3 .dist-title.marketing{color:var(--gold)}
+#panel-layer3 .dist-title.sales{color:var(--nine)}
+#panel-layer3 .dist-desc{font-size:13px;color:var(--muted);line-height:1.7}
+#panel-layer3 .dist-owner{margin-top:12px;font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px;display:inline-block}
+#panel-layer3 .dist-owner.m{background:var(--gold-bg);color:var(--gold);border:1px solid rgba(227,179,65,.25)}
+#panel-layer3 .dist-owner.s{background:var(--nine-bg);color:var(--nine);border:1px solid rgba(88,166,255,.25)}
+#panel-layer3 .section{padding:40px;border-bottom:1px solid var(--border)}
+#panel-layer3 .s-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+#panel-layer3 .s-num{font-size:11px;font-weight:600;padding:2px 10px;border-radius:20px;letter-spacing:.06em}
+#panel-layer3 .s-num.marketing{background:var(--gold-bg);color:var(--gold);border:1px solid rgba(227,179,65,.25)}
+#panel-layer3 .s-num.sales{background:var(--nine-bg);color:var(--nine);border:1px solid rgba(88,166,255,.25)}
+#panel-layer3 .s-num.value{background:var(--purple-bg);color:var(--purple);border:1px solid rgba(188,140,255,.25)}
+#panel-layer3 .s-num.insurance{background:var(--green-bg);color:var(--green);border:1px solid rgba(63,185,80,.25)}
+#panel-layer3 .s-title{font-size:18px;font-weight:600;color:var(--text)}
+#panel-layer3 .s-question{font-size:13px;color:var(--muted);margin-bottom:24px;padding:10px 16px;background:var(--card);border-radius:6px;border-left:3px solid var(--dim)}
+#panel-layer3 .s-question strong{color:var(--text2);font-weight:600}
+#panel-layer3 .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:12px;margin-bottom:20px}
+#panel-layer3 .kpi{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 20px;position:relative;overflow:hidden}
+#panel-layer3 .kpi::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;border-radius:8px 8px 0 0}
+#panel-layer3 .kpi.gold::after{background:var(--gold)}
+#panel-layer3 .kpi.blue::after{background:var(--nine)}
+#panel-layer3 .kpi.green::after{background:var(--green)}
+#panel-layer3 .kpi.purple::after{background:var(--purple)}
+#panel-layer3 .kpi-l{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:8px}
+#panel-layer3 .kpi-v{font-size:26px;font-weight:700;line-height:1}
+#panel-layer3 .kpi-s{font-size:11px;color:var(--muted);margin-top:5px}
+#panel-layer3 .c-nine{color:var(--nine)}
+#panel-layer3 .c-gold{color:var(--gold)}
+#panel-layer3 .c-green{color:var(--green)}
+#panel-layer3 .c-purple{color:var(--purple)}
+#panel-layer3 .cc{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:20px 22px;margin-bottom:14px}
+#panel-layer3 .cc-t{font-size:13px;font-weight:600;color:var(--text2);margin-bottom:2px}
+#panel-layer3 .cc-s{font-size:11px;color:var(--muted);margin-bottom:14px}
+#panel-layer3 canvas{max-height:240px}
+#panel-layer3 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+#panel-layer3 .grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+#panel-layer3 /* INTERPRETATION LINE — the key new element */
+  .interp{margin-top:12px;padding:10px 14px;border-radius:0 4px 4px 0;font-size:12px;color:var(--muted);line-height:1.7}
+#panel-layer3 .interp.gold{background:var(--gold-bg);border-left:3px solid var(--gold)}
+#panel-layer3 .interp.blue{background:var(--nine-bg);border-left:3px solid var(--nine)}
+#panel-layer3 .interp.purple{background:var(--purple-bg);border-left:3px solid var(--purple)}
+#panel-layer3 .interp.green{background:var(--green-bg);border-left:3px solid var(--green)}
+#panel-layer3 .interp strong{color:var(--text2);font-weight:600}
+#panel-layer3 .insight{margin-top:16px;padding:16px 20px;border-radius:6px;font-size:13px;color:var(--muted);line-height:1.8}
+#panel-layer3 .insight.gold{background:var(--gold-bg);border-left:3px solid var(--gold)}
+#panel-layer3 .insight.blue{background:var(--nine-bg);border-left:3px solid var(--nine)}
+#panel-layer3 .insight.green{background:var(--green-bg);border-left:3px solid var(--green)}
+#panel-layer3 .insight.purple{background:var(--purple-bg);border-left:3px solid var(--purple)}
+#panel-layer3 .insight strong{color:var(--text2);font-weight:600}
+#panel-layer3 /* CHANNEL TABLE */
+  .tbl-wrap{border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:14px}
+#panel-layer3 table{width:100%;border-collapse:collapse;font-size:12px}
+#panel-layer3 th{background:var(--card2);padding:10px 16px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);border-bottom:1px solid var(--border);text-align:right;white-space:nowrap}
+#panel-layer3 th:first-child{text-align:left}
+#panel-layer3 td{padding:11px 16px;border-bottom:1px solid rgba(33,38,45,.6);color:var(--text2);font-size:12px;text-align:right;vertical-align:middle}
+#panel-layer3 td:first-child{text-align:left;font-weight:600}
+#panel-layer3 tr:last-child td{border-bottom:none}
+#panel-layer3 tr:hover td{background:var(--card2)}
+#panel-layer3 .badge{display:inline-block;padding:2px 9px;border-radius:20px;font-size:10px;font-weight:600}
+#panel-layer3 .b-high{background:rgba(63,185,80,.12);color:var(--green)}
+#panel-layer3 .b-med{background:rgba(88,166,255,.12);color:var(--nine)}
+#panel-layer3 .b-low{background:rgba(110,118,129,.1);color:var(--dim)}
+#panel-layer3 /* INSURANCE */
+  .ins-row{display:flex;align-items:center;gap:14px;padding:9px 0;border-bottom:1px solid rgba(33,38,45,.5)}
+#panel-layer3 .ins-row:last-child{border-bottom:none}
+#panel-layer3 .ins-m{font-size:12px;font-weight:600;color:var(--muted);width:58px;flex-shrink:0}
+#panel-layer3 .ins-track{flex:1;background:rgba(255,255,255,.05);border-radius:3px;overflow:hidden;height:20px;display:flex}
+#panel-layer3 .ins-active{height:100%;display:flex;align-items:center;padding-left:8px;font-size:10px;font-weight:600;color:rgba(255,255,255,.8)}
+#panel-layer3 .ins-rest{height:100%;background:rgba(110,118,129,.15)}
+#panel-layer3 .ins-stat{font-size:11px;color:var(--muted);width:80px;text-align:right;flex-shrink:0}
+#panel-layer3 .ins-rev{font-size:11px;color:var(--muted);width:110px;text-align:right;flex-shrink:0}
+#panel-layer3 /* PROFILE CARD */
+  .profile-card{background:var(--card);border:2px solid var(--purple);border-radius:10px;padding:28px 32px;margin-top:24px}
+#panel-layer3 .pc-title{font-size:13px;font-weight:700;color:var(--purple);text-transform:uppercase;letter-spacing:.08em;margin-bottom:20px}
+#panel-layer3 .pc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:14px;margin-bottom:20px}
+#panel-layer3 .pc-item{background:var(--card2);border-radius:6px;padding:14px 16px}
+#panel-layer3 .pc-l{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:5px}
+#panel-layer3 .pc-v{font-size:17px;font-weight:700}
+#panel-layer3 .pc-s{font-size:11px;color:var(--muted);margin-top:3px}
+#panel-layer3 .pc-note{font-size:13px;color:var(--muted);line-height:1.75;border-top:1px solid var(--border);padding-top:16px}
+#panel-layer3 .pc-note strong{color:var(--text2);font-weight:600}
+#panel-layer3 footer{padding:24px 40px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+#panel-layer3 footer span{font-size:11px;color:var(--dim)}
+@media(max-width:900px){
+    .header,.section{padding-left:20px;padding-right:20px}
+    .distinction,.grid-2,.grid-3{grid-template-columns:1fr}
+    .h-title{font-size:24px}
+    .nav{padding:0 20px}
+    .nav-links{display:none}
+  }
+#panel-layer3 .nav-layers{display:flex;gap:6px;align-items:center}
+#panel-layer3 .nl{font-size:11px;font-weight:500;padding:4px 12px;border-radius:20px;text-decoration:none;transition:all .2s;border:1px solid var(--border);color:var(--muted)}
+#panel-layer3 .nl:hover{border-color:var(--nine);color:var(--nine)}
+#panel-layer3 .nl.active{background:var(--nine-bg);color:var(--nine);border-color:rgba(88,166,255,.3)}
+#panel-layer3 .nl-sep{color:var(--dim);font-size:10px}
+
+
+
+
+/* ── layer4 scoped ── */
+:root{
+    --bg:#0d1117;--card:#161b22;--card2:#1c2330;--border:#21262d;
+    --nine:#58a6ff;--nine-bg:rgba(88,166,255,.08);
+    --gold:#e3b341;--gold-bg:rgba(227,179,65,.08);
+    --green:#3fb950;--green-bg:rgba(63,185,80,.08);
+    --red:#f85149;--red-bg:rgba(248,81,73,.08);
+    --purple:#bc8cff;
+    --text:#e6edf3;--text2:#c9d1d9;--muted:#8b949e;--dim:#6e7681;
+  }
+#panel-layer4 *{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+#panel-layer4 body{background:var(--bg);color:var(--text);font-family:'Inter',-apple-system,sans-serif;font-size:14px;line-height:1.6}
+#panel-layer4 /* NAV */
+  .nav{position:sticky;top:0;z-index:100;background:rgba(13,17,23,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 40px;height:50px;display:flex;align-items:center;justify-content:space-between}
+#panel-layer4 .nav-brand{font-weight:700;font-size:14px;color:var(--nine)}
+#panel-layer4 .nav-layers{display:flex;gap:6px;align-items:center}
+#panel-layer4 .nl{font-size:11px;font-weight:500;padding:4px 12px;border-radius:20px;text-decoration:none;transition:all .2s;border:1px solid var(--border);color:var(--muted)}
+#panel-layer4 .nl:hover{border-color:var(--nine);color:var(--nine)}
+#panel-layer4 .nl.active{background:var(--green-bg);color:var(--green);border-color:rgba(63,185,80,.3)}
+#panel-layer4 .nl-sep{color:var(--dim);font-size:10px}
+#panel-layer4 /* HEADER */
+  .header{padding:48px 40px 40px;border-bottom:1px solid var(--border)}
+#panel-layer4 .h-label{font-size:11px;font-weight:600;color:var(--green);letter-spacing:.07em;text-transform:uppercase;margin-bottom:10px}
+#panel-layer4 .h-title{font-size:32px;font-weight:700;line-height:1.2;margin-bottom:6px}
+#panel-layer4 .h-sub{font-size:14px;color:var(--muted);margin-bottom:28px}
+#panel-layer4 /* GAP ROW */
+  .gap-row{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px}
+#panel-layer4 .gap-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 22px}
+#panel-layer4 .gap-card.highlight{border-color:rgba(248,81,73,.3);background:var(--red-bg)}
+#panel-layer4 .gc-l{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:6px}
+#panel-layer4 .gc-v{font-size:28px;font-weight:700;line-height:1}
+#panel-layer4 .gc-s{font-size:11px;color:var(--muted);margin-top:4px}
+#panel-layer4 /* SECTION */
+  .section{padding:40px;border-bottom:1px solid var(--border)}
+#panel-layer4 .s-head{display:flex;align-items:baseline;gap:12px;margin-bottom:20px}
+#panel-layer4 .s-tag{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 10px;border-radius:20px;flex-shrink:0}
+#panel-layer4 .s-tag.now{background:var(--red-bg);color:var(--red);border:1px solid rgba(248,81,73,.25)}
+#panel-layer4 .s-tag.q2{background:var(--gold-bg);color:var(--gold);border:1px solid rgba(227,179,65,.25)}
+#panel-layer4 .s-tag.q3{background:var(--nine-bg);color:var(--nine);border:1px solid rgba(88,166,255,.25)}
+#panel-layer4 .s-tag.always{background:var(--green-bg);color:var(--green);border:1px solid rgba(63,185,80,.25)}
+#panel-layer4 .s-title{font-size:19px;font-weight:700}
+#panel-layer4 .s-desc{font-size:13px;color:var(--muted);margin-bottom:24px;line-height:1.6;max-width:720px}
+#panel-layer4 /* ACTION CARD */
+  .ac{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:24px 26px;margin-bottom:14px}
+#panel-layer4 .ac-what{font-size:15px;font-weight:700;margin-bottom:6px}
+#panel-layer4 .ac-why{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:14px}
+#panel-layer4 .ac-result{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;padding:6px 14px;border-radius:6px}
+#panel-layer4 .ac-result.red{background:var(--red-bg);color:var(--red)}
+#panel-layer4 .ac-result.gold{background:var(--gold-bg);color:var(--gold)}
+#panel-layer4 .ac-result.blue{background:var(--nine-bg);color:var(--nine)}
+#panel-layer4 /* MARKETING TARGET */
+  .target-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:20px}
+#panel-layer4 .tg{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:20px 22px}
+#panel-layer4 .tg-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:6px}
+#panel-layer4 .tg-val{font-size:18px;font-weight:700;margin-bottom:4px}
+#panel-layer4 .tg-why{font-size:11px;color:var(--muted);line-height:1.6}
+#panel-layer4 /* MONTHLY TABLE */
+  .month-table{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:14px}
+#panel-layer4 .month-table th{background:var(--card2);padding:9px 14px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-bottom:1px solid var(--border);text-align:right;white-space:nowrap}
+#panel-layer4 .month-table th:first-child{text-align:left}
+#panel-layer4 .month-table td{padding:9px 14px;border-bottom:1px solid rgba(33,38,45,.5);text-align:right;color:var(--text2);font-size:12px}
+#panel-layer4 .month-table td:first-child{text-align:left;font-weight:600;color:var(--text2)}
+#panel-layer4 .month-table tr:last-child td{border-bottom:none;font-weight:700;background:var(--card2)}
+#panel-layer4 .month-table tr:hover td{background:var(--card2)}
+#panel-layer4 .t-green{color:var(--green)!important}
+#panel-layer4 .t-gold{color:var(--gold)!important}
+#panel-layer4 .t-blue{color:var(--nine)!important}
+#panel-layer4 .t-dim{color:var(--dim)!important}
+#panel-layer4 .cc{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:20px 22px;margin-bottom:14px}
+#panel-layer4 .cc-t{font-size:13px;font-weight:600;color:var(--text2);margin-bottom:2px}
+#panel-layer4 .cc-s{font-size:11px;color:var(--muted);margin-bottom:14px}
+#panel-layer4 canvas{max-height:220px}
+#panel-layer4 .note{padding:12px 16px;border-radius:6px;font-size:12px;color:var(--muted);line-height:1.7;margin-top:12px}
+#panel-layer4 .note.gold{background:var(--gold-bg);border-left:3px solid var(--gold)}
+#panel-layer4 .note.green{background:var(--green-bg);border-left:3px solid var(--green)}
+#panel-layer4 .note.blue{background:var(--nine-bg);border-left:3px solid var(--nine)}
+#panel-layer4 .note.red{background:var(--red-bg);border-left:3px solid var(--red)}
+#panel-layer4 .note strong{color:var(--text2);font-weight:600}
+#panel-layer4 /* OP FIX */
+  .op{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:8px;padding:16px 20px}
+#panel-layer4 .op-t{font-size:13px;font-weight:600;color:var(--text2);margin-bottom:6px}
+#panel-layer4 .op-d{font-size:12px;color:var(--muted);line-height:1.7}
+#panel-layer4 footer{padding:24px 40px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;border-top:1px solid var(--border)}
+#panel-layer4 footer span{font-size:11px;color:var(--dim)}
+@media(max-width:900px){
+    .header,.section{padding-left:20px;padding-right:20px}
+    .gap-row,.target-grid{grid-template-columns:1fr 1fr}
+    .nav{padding:0 20px}
+    .nav-layers{display:none}
+  }
+#panel-layer4 /* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:5px;height:5px}
+#panel-layer4 ::-webkit-scrollbar-track{background:var(--bg)}
+#panel-layer4 ::-webkit-scrollbar-thumb{background:#30363d;border-radius:3px}
+
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="tb-brand">Alba Dental · Nine Program</span>
+  <span class="tb-meta">Jan 2024 – Feb 2026 · 5,453 patients · 591 Nine subscribers</span>
+</div>
+
+<div class="tabs">
+  <button class="tab-btn active" data-tab="layer1" onclick="switchTab('layer1')">
+        <span class="tab-icon">📊</span>
+        <div class="tab-text">
+          <span class="tab-num" style="color:var(--nine)">01</span>
+          <span class="tab-label">Layer 1 · Baseline</span>
+          <span class="tab-sub">Clinic Health & Growth</span>
+        </div>
+      </button><button class="tab-btn" data-tab="layer2" onclick="switchTab('layer2')">
+        <span class="tab-icon">👥</span>
+        <div class="tab-text">
+          <span class="tab-num" style="color:var(--purple)">02</span>
+          <span class="tab-label">Layer 2 · Behavior</span>
+          <span class="tab-sub">Patient Behavior & Targets</span>
+        </div>
+      </button><button class="tab-btn" data-tab="layer3" onclick="switchTab('layer3')">
+        <span class="tab-icon">🎯</span>
+        <div class="tab-text">
+          <span class="tab-num" style="color:var(--gold)">03</span>
+          <span class="tab-label">Layer 3 · Segments</span>
+          <span class="tab-sub">Channels & Segmentation</span>
+        </div>
+      </button><button class="tab-btn" data-tab="layer4" onclick="switchTab('layer4')">
+        <span class="tab-icon">🚀</span>
+        <div class="tab-text">
+          <span class="tab-num" style="color:var(--green)">04</span>
+          <span class="tab-label">Layer 4 · Strategy</span>
+          <span class="tab-sub">2026 Action Plan</span>
+        </div>
+      </button>
+</div>
+
+<div id="content">
+<div id="panel-layer1" class="layer-panel" style="display:block">
+<!-- NAV -->
+
+
+<!-- HEADER -->
+<div class="header">
+  <div>
+    <div class="header-label">Layer 1 — Baseline Health Report</div>
+    <h1 class="header-title">What Is <span>Actually Happening</span><br>at Alba Clinic</h1>
+    <p class="header-desc">All figures are actual collected payments only — no modeled or theoretical values. Both files joined on patient file number with zero duplication. Nine revenue reflects co-payments from cosmetic and implant procedures. Subscription fees are collected separately.</p>
+    <div class="validated"><div class="pulse"></div> Validated · file number join · 0 duplicates · 5,453 patients</div>
+  </div>
+  <div class="header-meta">
+    <div class="meta-row"><strong>Period:</strong> Jan 2024 – Feb 2026</div>
+    <div class="meta-row"><strong>Total patients:</strong> 5,453</div>
+    <div class="meta-row"><strong>Nine subscribers:</strong> 591</div>
+    <div class="meta-row"><strong>Total appointments:</strong> 14,896</div>
+    <div class="meta-row"><strong>Total co-pay revenue:</strong> 7.75M SAR</div>
+    <div class="meta-row"><strong>Nine subscription:</strong> 1,500 SAR/mo (external)</div>
+  </div>
+</div>
+
+<!-- GOAL BANNER -->
+<div class="goal-banner" id="goal">
+  <div class="goal-top">
+    <div class="g-item">
+      <div class="g-label">2026 Goal</div>
+      <div class="g-value c-nine">4,000</div>
+      <div class="g-sub">Nine subscribers</div>
+    </div>
+    <div class="g-div"></div>
+    <div class="g-item">
+      <div class="g-label">Current</div>
+      <div class="g-value c-green">591</div>
+      <div class="g-sub">as of Feb-26</div>
+    </div>
+    <div class="g-div"></div>
+    <div class="g-item">
+      <div class="g-label">Gap</div>
+      <div class="g-value c-red">3,409</div>
+      <div class="g-sub">subscribers needed</div>
+    </div>
+    <div class="g-div"></div>
+    <div class="g-item">
+      <div class="g-label">Best Month Ever</div>
+      <div class="g-value c-gold">75</div>
+      <div class="g-sub">new Nine · Dec-25</div>
+    </div>
+    <div class="g-div"></div>
+    <div class="g-item">
+      <div class="g-label">Needed / Month</div>
+      <div class="g-value c-red">341</div>
+      <div class="g-sub">Mar – Dec 2026 · 10 months</div>
+    </div>
+    <div class="g-progress">
+      <div class="prog-labels">
+        <span>Progress to goal</span>
+        <span class="c-nine" id="pctLabel">14.8% complete</span>
+      </div>
+      <div class="prog-track">
+        <div class="prog-fill" id="layer1_pFill" style="width:0%"></div>
+      </div>
+      <div class="prog-labels"><span>0</span><span>4,000</span></div>
+    </div>
+  </div>
+  <div class="goal-alert">
+    <strong>Strategic conclusion — new patient acquisition alone cannot close this gap.</strong> Best month ever was 75 new Nine subscribers against a required 341/month. At current acquisition (~230/month) even a 100% conversion rate yields only 2,300 new subscribers in 10 months. <strong>The primary 2026 lever must be converting the 4,862 existing non-Nine patients already in the system. Layer 2 has identified 426 of them ready to approach today.</strong>
+  </div>
+</div>
+
+<!-- 01 REVENUE -->
+<div class="section" id="revenue">
+  <div class="section-head"><span class="s-num">01</span><h2 class="s-title">Revenue — Co-payments Collected</h2></div>
+
+  <div class="kpi-grid">
+    <div class="kpi blue">
+      <div class="kpi-label">Total Revenue</div>
+      <div class="kpi-value c-nine">7.75M SAR</div>
+      <div class="kpi-sub">Jan 2024 – Feb 2026 · co-payments only</div>
+    </div>
+    <div class="kpi blue">
+      <div class="kpi-label">Nine Co-pay Revenue</div>
+      <div class="kpi-value c-nine">2.36M SAR</div>
+      <div class="kpi-sub">cosmetic & implant top-ups · Nine patients</div>
+    </div>
+    <div class="kpi gold">
+      <div class="kpi-label">Regular Patient Revenue</div>
+      <div class="kpi-value c-gold">5.39M SAR</div>
+      <div class="kpi-sub">non-Nine treatment payments</div>
+    </div>
+    <div class="kpi green">
+      <div class="kpi-label">Nine % of Jan-26 Revenue</div>
+      <div class="kpi-value c-green">70.8%</div>
+      <div class="kpi-sub">Nine dominates monthly co-pay revenue</div>
+    </div>
+    <div class="kpi purple">
+      <div class="kpi-label">Peak Month</div>
+      <div class="kpi-value c-purple">654K SAR</div>
+      <div class="kpi-sub">December 2025</div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="leg"><div class="leg-dot" style="background:var(--nine)"></div>Nine Co-pay Revenue</div>
+    <div class="leg"><div class="leg-dot" style="background:var(--gold)"></div>Regular Patient Revenue</div>
+  </div>
+  <div class="chart-card">
+    <div class="cc-title">Monthly Revenue by Stream</div>
+    <div class="cc-sub">Stacked · SAR · actual collected co-payments · Jan 2024 – Feb 2026</div>
+    <canvas id="layer1_cRevStacked"></canvas>
+  </div>
+
+  <div class="grid-2">
+    <div class="chart-card">
+      <div class="cc-title">Nine Co-pay Revenue as % of Total</div>
+      <div class="cc-sub">Nine's share growing month by month</div>
+      <canvas id="layer1_cNinePct"></canvas>
+    </div>
+    <div class="chart-card">
+      <div class="cc-title">Cumulative Nine Subscribers vs 4,000 Goal</div>
+      <div class="cc-sub">Running total · dashed = goal line</div>
+      <canvas id="layer1_cCumulative"></canvas>
+    </div>
+  </div>
+
+  <div class="insight blue">
+    <strong>Key finding:</strong> Nine co-pay revenue grew from near zero in 2024 to 392K SAR in Jan-26, representing 70.8% of that month's total revenue. Meanwhile regular patient revenue has been declining since Oct-25 — from 255K to 132K SAR. This reflects the natural shift as the subscriber base grows: more clinic activity comes from Nine members pursuing cosmetic procedures. <strong>Regular treatment revenue decline is expected and healthy as long as Nine subscriber growth continues.</strong>
+  </div>
+</div>
+
+<!-- 02 APPOINTMENTS -->
+<div class="section" id="appointments">
+  <div class="section-head"><span class="s-num">02</span><h2 class="s-title">Appointments — Nine Patients Taking Over the Chair</h2></div>
+
+  <div class="kpi-grid">
+    <div class="kpi blue">
+      <div class="kpi-label">Total Appointments</div>
+      <div class="kpi-value c-nine">14,896</div>
+      <div class="kpi-sub">Jan 2024 – Feb 2026 · verified</div>
+    </div>
+    <div class="kpi green">
+      <div class="kpi-label">Peak Month</div>
+      <div class="kpi-value c-green">1,037</div>
+      <div class="kpi-sub">Dec-25 · all patients combined</div>
+    </div>
+    <div class="kpi blue">
+      <div class="kpi-label">Nine Appts Feb-26</div>
+      <div class="kpi-value c-nine">564</div>
+      <div class="kpi-sub">60.9% of all Feb-26 appointments</div>
+    </div>
+    <div class="kpi gold">
+      <div class="kpi-label">Avg Appts · Nine Patient</div>
+      <div class="kpi-value c-gold">7.3</div>
+      <div class="kpi-sub">vs 2.2 for regular patients</div>
+    </div>
+    <div class="kpi red">
+      <div class="kpi-label">At 4,000 Subscribers</div>
+      <div class="kpi-value c-red">2,433</div>
+      <div class="kpi-sub">Nine appts needed per month · 2× current capacity</div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="leg"><div class="leg-dot" style="background:var(--nine)"></div>Nine Patient Appointments</div>
+    <div class="leg"><div class="leg-dot" style="background:var(--gold)"></div>Regular Patient Appointments</div>
+  </div>
+  <div class="chart-card">
+    <div class="cc-title">Monthly Appointments — Nine vs Regular Patients</div>
+    <div class="cc-sub">Stacked · Jan 2024 – Feb 2026 · cross-validated against appointments file</div>
+    <canvas id="layer1_cAppts"></canvas>
+  </div>
+
+  <div class="insight gold">
+    <strong>Capacity alert:</strong> Nine subscribers visit 3.3× more frequently than regular patients. At 4,000 subscribers, Nine appointments alone would reach ~2,433/month — more than double current total clinic capacity of 1,037/month. <strong>Growing the subscriber base without a parallel capacity expansion plan will create a bottleneck. This must be part of the 2026 strategy.</strong>
+  </div>
+</div>
+
+<!-- 03 ACQUISITION -->
+<div class="section" id="acquisition">
+  <div class="section-head"><span class="s-num">03</span><h2 class="s-title">New Patient Acquisition</h2></div>
+
+  <div class="kpi-grid">
+    <div class="kpi blue">
+      <div class="kpi-label">Total Registered</div>
+      <div class="kpi-value c-nine">5,453</div>
+      <div class="kpi-sub">Jan 2024 – Feb 2026</div>
+    </div>
+    <div class="kpi green">
+      <div class="kpi-label">Peak Month</div>
+      <div class="kpi-value c-green">368</div>
+      <div class="kpi-sub">Feb-25 · highest ever</div>
+    </div>
+    <div class="kpi gold">
+      <div class="kpi-label">26-Month Average</div>
+      <div class="kpi-value c-gold">210</div>
+      <div class="kpi-sub">new patients per month</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Visited at Least Once</div>
+      <div class="kpi-value">3,929</div>
+      <div class="kpi-sub">72% of all registered patients</div>
+    </div>
+  </div>
+
+  <div class="chart-card">
+    <div class="cc-title">New Patient Registrations per Month</div>
+    <div class="cc-sub">Based on registration date · Jan 2024 – Feb 2026</div>
+    <canvas id="layer1_cAcq"></canvas>
+  </div>
+
+  <div class="insight blue">
+    <strong>Key finding:</strong> Two clear acquisition peaks — May-24 (201) and Feb-25 (368) — both likely driven by promotions. H2-25 stabilized at 250–280/month. At current acquisition rates, new patient volume alone cannot fuel the Nine goal. <strong>Converting the existing 4,862 non-Nine patients in the system is the faster and more cost-effective path to 4,000 subscribers.</strong>
+  </div>
+</div>
+
+<!-- 04 CONVERSION -->
+<div class="section" id="layer1_conversion">
+  <div class="section-head"><span class="s-num">04</span><h2 class="s-title">Nine Conversion Rate — The Most Important Number</h2></div>
+
+  <div class="kpi-grid">
+    <div class="kpi blue">
+      <div class="kpi-label">Overall Conversion Rate</div>
+      <div class="kpi-value c-nine">10.8%</div>
+      <div class="kpi-sub">591 of 5,453 total patients</div>
+    </div>
+    <div class="kpi gold">
+      <div class="kpi-label">2024 Average</div>
+      <div class="kpi-value c-gold">1.5%</div>
+      <div class="kpi-sub">Nine barely existed in Year 1</div>
+    </div>
+    <div class="kpi green">
+      <div class="kpi-label">2025 Average</div>
+      <div class="kpi-value c-green">14.2%</div>
+      <div class="kpi-sub">major acceleration in Year 2</div>
+    </div>
+    <div class="kpi green">
+      <div class="kpi-label">Peak Month</div>
+      <div class="kpi-value c-green">27.4%</div>
+      <div class="kpi-sub">Jan-26 · 65 from 237 patients</div>
+    </div>
+    <div class="kpi red">
+      <div class="kpi-label">Rate Needed for Goal</div>
+      <div class="kpi-value c-red">148%</div>
+      <div class="kpi-sub">at current acquisition volume — impossible</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="chart-card">
+      <div class="cc-title">Monthly Nine Conversion Rate (%)</div>
+      <div class="cc-sub">% of patients registered that month who became Nine subscribers</div>
+      <canvas id="layer1_cConvRate"></canvas>
+    </div>
+    <div class="chart-card">
+      <div class="cc-title">New Nine Subscribers per Month</div>
+      <div class="cc-sub">Green = 50+ · Blue = 20+ · Dim = under 20</div>
+      <canvas id="layer1_cNewNine"></canvas>
+    </div>
+  </div>
+
+  <div class="insight blue">
+    <strong>Key finding:</strong> Conversion rate went from near-zero in 2024 to a consistent 22–27% range in Q4-25 and Jan-26. Something materially changed — the offer, the pitch, or patient awareness improved significantly. Feb-26 dropped to 15.4%, worth monitoring. <strong>The conversion trend is the most encouraging signal in the data. The challenge is that even at 27%, you would need 1,263 new patients per month to generate 341 new Nine subscribers.</strong> This confirms that existing patient conversion must be the primary 2026 lever.
+  </div>
+</div>
+
+<!-- 05 EFFICIENCY -->
+<div class="section" id="efficiency">
+  <div class="section-head"><span class="s-num">05</span><h2 class="s-title">Revenue per Appointment</h2></div>
+
+  <div class="kpi-grid">
+    <div class="kpi blue">
+      <div class="kpi-label">26-Month Average</div>
+      <div class="kpi-value c-nine">520 SAR</div>
+      <div class="kpi-sub">per appointment · all patients</div>
+    </div>
+    <div class="kpi green">
+      <div class="kpi-label">Peak</div>
+      <div class="kpi-value c-green">648 SAR</div>
+      <div class="kpi-sub">August 2024</div>
+    </div>
+    <div class="kpi red">
+      <div class="kpi-label">Feb-26</div>
+      <div class="kpi-value c-red">392 SAR</div>
+      <div class="kpi-sub">lowest since clinic opened</div>
+    </div>
+    <div class="kpi gold">
+      <div class="kpi-label">Why It Looks Declining</div>
+      <div class="kpi-value c-gold" style="font-size:16px;padding-top:6px">Mix Effect</div>
+      <div class="kpi-sub">Nine visits don't generate per-visit co-pay</div>
+    </div>
+  </div>
+
+  <div class="chart-card">
+    <div class="cc-title">Revenue per Appointment — Monthly Trend</div>
+    <div class="cc-sub">Total revenue ÷ total appointments · red points = below 420 SAR</div>
+    <canvas id="layer1_cRPA"></canvas>
+  </div>
+
+  <div class="insight blue">
+    <strong>Key finding:</strong> This metric is becoming misleading as Nine grows. Nine subscribers visit frequently but only generate co-pay revenue when they pursue cosmetic or implant procedures — many months they visit with no additional charge. The more Nine appointments there are, the lower this number looks. <strong>Going forward, track two separate metrics: revenue-per-appointment for regular patients (treatment efficiency), and co-pay revenue per active Nine subscriber per month (subscription upsell health).</strong>
+  </div>
+</div>
+
+<!-- 06 REFUNDS -->
+<div class="section" id="refunds">
+  <div class="section-head"><span class="s-num">06</span><h2 class="s-title">Refunds — Minimal and Sporadic</h2></div>
+
+  <div class="kpi-grid">
+    <div class="kpi">
+      <div class="kpi-label">Total Refunds</div>
+      <div class="kpi-value c-red">20,660 SAR</div>
+      <div class="kpi-sub">16 transactions across 26 months</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">As % of Revenue</div>
+      <div class="kpi-value">0.27%</div>
+      <div class="kpi-sub">very low · no systemic issue</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Largest Single Refund</div>
+      <div class="kpi-value c-red">5,000 SAR</div>
+      <div class="kpi-sub">July 2025 · investigate individually</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Months With Refunds</div>
+      <div class="kpi-value">11 of 26</div>
+      <div class="kpi-sub">sporadic · no trend</div>
+    </div>
+  </div>
+
+  <div class="chart-card">
+    <div class="cc-title">Monthly Refund Amounts (SAR)</div>
+    <div class="cc-sub">Negative payment values interpreted as refunds or reversals</div>
+    <canvas id="layer1_cRefunds"></canvas>
+  </div>
+
+  <div class="insight blue">
+    <strong>Key finding:</strong> Refunds are minimal at 0.27% of total revenue and show no trend. No systemic issue exists today. As Nine scales and subscription cancellations become more common, monitor this metric monthly to catch any rising refund pattern early.
+  </div>
+</div>
+
+<!-- 07 VISIT FREQUENCY -->
+<div class="section" id="visitfreq">
+  <div class="section-head"><span class="s-num">07</span><h2 class="s-title">Visit Frequency — The Three Patient Groups</h2></div>
+
+  <!-- MEDIAN FOOTNOTE -->
+  <div style="background:#161b22;border:1px solid #21262d;border-left:3px solid #e3b341;border-radius:6px;padding:16px 20px;margin-bottom:24px;">
+    <div style="font-size:12px;font-weight:600;color:#e3b341;margin-bottom:8px;text-transform:uppercase;letter-spacing:.06em;">📊 Why We Use Median, Not Average — A Note for the Team</div>
+    <div style="font-size:13px;color:#8b949e;line-height:1.8;">
+      <strong style="color:#c9d1d9;">The problem with averages:</strong> Imagine 10 patients. Nine of them visited 2 times each. One visited 20 times. The average is 3.8 visits — but that number describes nobody in the room. It is pulled up by the single heavy user and makes the typical patient look more engaged than they are.<br><br>
+      <strong style="color:#c9d1d9;">What median tells you instead:</strong> The median is simply the middle value — half the patients are above it, half are below. In the same example, the median is 2. That accurately describes what a typical patient actually does.<br><br>
+      <strong style="color:#c9d1d9;">Rule of thumb:</strong> When a small number of people do a lot (heavy users, big spenders), always use median. It gives you the realistic picture. Average will always flatter the numbers.
+    </div>
+  </div>
+
+  <!-- GROUP SUMMARY CARDS -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:28px;">
+
+    <!-- GROUP A: NINE -->
+    <div style="background:#161b22;border:1px solid #21262d;border-top:3px solid #58a6ff;border-radius:8px;padding:20px 22px;">
+      <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#58a6ff;margin-bottom:4px;">Group A</div>
+      <div style="font-size:18px;font-weight:700;color:#e6edf3;margin-bottom:16px;">Nine Subscribers</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
+        <div>
+          <div style="font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px;">Total in Group</div>
+          <div style="font-size:22px;font-weight:700;color:#58a6ff;">591</div>
+        </div>
+        <div>
+          <div style="font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px;">Never Visited</div>
+          <div style="font-size:22px;font-weight:700;color:#f85149;">31</div>
+          <div style="font-size:10px;color:#8b949e;">5.2% enrolled, inactive</div>
+        </div>
+        <div>
+          <div style="font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px;">Median Total Visits</div>
+          <div style="font-size:22px;font-weight:700;color:#3fb950;">6</div>
+          <div style="font-size:10px;color:#8b949e;">mean = 7.3 (inflated)</div>
+        </div>
+        <div>
+          <div style="font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px;">Median Active Months</div>
+          <div style="font-size:22px;font-weight:700;color:#3fb950;">2</div>
+          <div style="font-size:10px;color:#8b949e;">months with ≥1 visit</div>
+        </div>
+        <div>
+          <div style="font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px;">Visits When They Come</div>
+          <div style="font-size:22px;font-weight:700;color:#e3b341;">2.3</div>
+          <div style="font-size:10px;color:#8b949e;">median per active month</div>
+        </div>
+        <div>
+          <div style="font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px;">Highest Single Patient</div>
+          <div style="font-size:22px;font-weight:700;color:#bc8cff;">54</div>
+          <div style="font-size:10px;color:#8b949e;">total visits · outlier</div>
+        </div>
+      </div>
+      <!-- Mini distribution bar -->
+      <div style="font-size:10px;color:#8b949e;margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em;">Visit Distribution</div>
+      <div style="display:flex;flex-direction:column;gap:4px;">
+        <div style="display:flex;align-items:center;gap:8px;font-size:11px;">
+          <span style="width:36px;color:#6e7681;text-align:right;">0</span>
+          <div style="flex:1;background:rgba(248,81,73,0.15);border-radius:2px;overflow:hidden;height:14px;">
+            <div style="width:5.2%;background:#f85149;height:100%;border-radius:2px;"></div>
+          </div>
+          <span style="color:#8b949e;width:36px;">5.2%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:11px;">
+          <span style="width:36px;color:#6e7681;text-align:right;">1–2</span>
+          <div style="flex:1;background:rgba(88,166,255,0.1);border-radius:2px;overflow:hidden;height:14px;">
+            <div style="width:18.7%;background:#58a6ff;height:100%;border-radius:2px;"></div>
+          </div>
+          <span style="color:#8b949e;width:36px;">18.7%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:11px;">
+          <span style="width:36px;color:#6e7681;text-align:right;">3–5</span>
+          <div style="flex:1;background:rgba(88,166,255,0.1);border-radius:2px;overflow:hidden;height:14px;">
+            <div style="width:25%;background:#58a6ff;height:100%;border-radius:2px;"></div>
+          </div>
+          <span style="color:#8b949e;width:36px;">25.0%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:11px;">
+          <span style="width:36px;color:#6e7681;text-align:right;">6–10</span>
+          <div style="flex:1;background:rgba(63,185,80,0.1);border-radius:2px;overflow:hidden;height:14px;">
+            <div style="width:27.2%;background:#3fb950;height:100%;border-radius:2px;"></div>
+          </div>
+          <span style="color:#8b949e;width:36px;">27.2%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:11px;">
+          <span style="width:36px;color:#6e7681;text-align:right;">11–20</span>
+          <div style="flex:1;background:rgba(63,185,80,0.1);border-radius:2px;overflow:hidden;height:14px;">
+            <div style="width:19.8%;background:#3fb950;height:100%;border-radius:2px;"></div>
+          </div>
+          <span style="color:#8b949e;width:36px;">19.8%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:11px;">
+          <span style="width:36px;color:#6e7681;text-align:right;">20+</span>
+          <div style="flex:1;background:rgba(188,140,255,0.1);border-radius:2px;overflow:hidden;height:14px;">
+            <div style="width:4.1%;background:#bc8cff;height:100%;border-radius:2px;"></div>
+          </div>
+          <span style="color:#8b949e;width:36px;">4.1%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- GROUP B: TREATED -->
+    <div style="background:#161b22;border:1px solid #21262d;border-top:3px solid #e3b341;border-radius:8px;padding:20px 22px;">
+      <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#e3b341;margin-bottom:4px;">Group B</div>
+      <div style="font-size:18px;font-weight:700;color:#e6edf3;margin-bottom:16px;">Treated Non-Nine</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
+        <div>
+          <div style="font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px;">Total in Group</div>
+          <div style="font-size:22px;font-weight:700;color:#e3b341;">1,879</div>
+        </div>
+        <div>
+          <div style="font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px;">Never Visited</div>
+          <div style="font-size:22px;font-weight:700;color:#3fb950;">0</div>
+          <div style="font-size:10px;color:#8b949e;">all paid = all visited</div>
+        </div>
+        <div>
+          <div style="font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px;">Median Total Visits</div>
+          <div style="font-size:22px;font-weight:700;color:#e3b341;">2</div>
+          <div style="font-size:10px;color:#8b949e;">mean = 4.6 (inflated)</div>
+        </div>
+        <div>
+          <div style="font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px;">Median Active Months</div>
+          <div style="font-size:22px;font-weight:700;color:#e3b341;">1</div>
+          <div style="font-size:10px;color:#8b949e;">most are one-month patients</div>
+        </div>
+        <div>
+          <div style="font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px;">Visits When They Come</div>
+          <div style="font-size:22px;font-weight:700;color:#e3b341;">1.3</div>
+          <div style="font-size:10px;color:#8b949e;">median per active month</div>
+        </div>
+        <div>
+          <div style="font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px;">Highest Single Patient</div>
+          <div style="font-size:22px;font-weight:700;color:#bc8cff;">54</div>
+          <div style="font-size:10px;color:#8b949e;">total visits · outlier</div>
+        </div>
+      </div>
+      <div style="font-size:10px;color:#8b949e;margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em;">Visit Distribution</div>
+      <div style="display:flex;flex-direction:column;gap:4px;">
+        <div style="display:flex;align-items:center;gap:8px;font-size:11px;">
+          <span style="width:36px;color:#6e7681;text-align:right;">1</span>
+          <div style="flex:1;background:rgba(227,179,65,0.1);border-radius:2px;overflow:hidden;height:14px;">
+            <div style="width:37.5%;background:#e3b341;height:100%;border-radius:2px;"></div>
+          </div>
+          <span style="color:#8b949e;width:36px;">37.5%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:11px;">
+          <span style="width:36px;color:#6e7681;text-align:right;">2</span>
+          <div style="flex:1;background:rgba(227,179,65,0.1);border-radius:2px;overflow:hidden;height:14px;">
+            <div style="width:16.5%;background:#e3b341;height:100%;border-radius:2px;"></div>
+          </div>
+          <span style="color:#8b949e;width:36px;">16.5%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:11px;">
+          <span style="width:36px;color:#6e7681;text-align:right;">3–5</span>
+          <div style="flex:1;background:rgba(227,179,65,0.1);border-radius:2px;overflow:hidden;height:14px;">
+            <div style="width:22.3%;background:#e3b341;height:100%;border-radius:2px;"></div>
+          </div>
+          <span style="color:#8b949e;width:36px;">22.3%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:11px;">
+          <span style="width:36px;color:#6e7681;text-align:right;">6–10</span>
+          <div style="flex:1;background:rgba(63,185,80,0.1);border-radius:2px;overflow:hidden;height:14px;">
+            <div style="width:12.8%;background:#3fb950;height:100%;border-radius:2px;"></div>
+          </div>
+          <span style="color:#8b949e;width:36px;">12.8%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:11px;">
+          <span style="width:36px;color:#6e7681;text-align:right;">11–20</span>
+          <div style="flex:1;background:rgba(63,185,80,0.1);border-radius:2px;overflow:hidden;height:14px;">
+            <div style="width:7.2%;background:#3fb950;height:100%;border-radius:2px;"></div>
+          </div>
+          <span style="color:#8b949e;width:36px;">7.2%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:11px;">
+          <span style="width:36px;color:#6e7681;text-align:right;">20+</span>
+          <div style="flex:1;background:rgba(188,140,255,0.1);border-radius:2px;overflow:hidden;height:14px;">
+            <div style="width:3.6%;background:#bc8cff;height:100%;border-radius:2px;"></div>
+          </div>
+          <span style="color:#8b949e;width:36px;">3.6%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- GROUP C: CONSULTATION -->
+    <div style="background:#161b22;border:1px solid #21262d;border-top:3px solid #6e7681;border-radius:8px;padding:20px 22px;">
+      <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#8b949e;margin-bottom:4px;">Group C</div>
+      <div style="font-size:18px;font-weight:700;color:#e6edf3;margin-bottom:16px;">Consultation Only</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
+        <div>
+          <div style="font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px;">Total in Group</div>
+          <div style="font-size:22px;font-weight:700;color:#8b949e;">2,983</div>
+        </div>
+        <div>
+          <div style="font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px;">Free Consult Only</div>
+          <div style="font-size:22px;font-weight:700;color:#8b949e;">1,493</div>
+          <div style="font-size:10px;color:#6e7681;">50% never came back</div>
+        </div>
+        <div>
+          <div style="font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px;">Median Total Visits</div>
+          <div style="font-size:22px;font-weight:700;color:#8b949e;">0</div>
+          <div style="font-size:10px;color:#6e7681;">half never returned</div>
+        </div>
+        <div>
+          <div style="font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px;">Came Back Once</div>
+          <div style="font-size:22px;font-weight:700;color:#e3b341;">1,196</div>
+          <div style="font-size:10px;color:#6e7681;">40% had exactly 1 follow-up</div>
+        </div>
+        <div>
+          <div style="font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px;">3+ Visits (potential)</div>
+          <div style="font-size:22px;font-weight:700;color:#58a6ff;">76</div>
+          <div style="font-size:10px;color:#6e7681;">showed engagement, no Nine</div>
+        </div>
+        <div>
+          <div style="font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px;">Visits When They Come</div>
+          <div style="font-size:22px;font-weight:700;color:#8b949e;">1.0</div>
+          <div style="font-size:10px;color:#6e7681;">median per active month</div>
+        </div>
+      </div>
+      <div style="font-size:10px;color:#8b949e;margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em;">Visit Distribution</div>
+      <div style="display:flex;flex-direction:column;gap:4px;">
+        <div style="display:flex;align-items:center;gap:8px;font-size:11px;">
+          <span style="width:36px;color:#6e7681;text-align:right;">0</span>
+          <div style="flex:1;background:rgba(110,118,129,0.1);border-radius:2px;overflow:hidden;height:14px;">
+            <div style="width:50.1%;background:#6e7681;height:100%;border-radius:2px;"></div>
+          </div>
+          <span style="color:#8b949e;width:36px;">50.1%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:11px;">
+          <span style="width:36px;color:#6e7681;text-align:right;">1</span>
+          <div style="flex:1;background:rgba(110,118,129,0.1);border-radius:2px;overflow:hidden;height:14px;">
+            <div style="width:40.1%;background:#6e7681;height:100%;border-radius:2px;"></div>
+          </div>
+          <span style="color:#8b949e;width:36px;">40.1%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:11px;">
+          <span style="width:36px;color:#6e7681;text-align:right;">2</span>
+          <div style="flex:1;background:rgba(110,118,129,0.1);border-radius:2px;overflow:hidden;height:14px;">
+            <div style="width:7.3%;background:#6e7681;height:100%;border-radius:2px;"></div>
+          </div>
+          <span style="color:#8b949e;width:36px;">7.3%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:11px;">
+          <span style="width:36px;color:#6e7681;text-align:right;">3–5</span>
+          <div style="flex:1;background:rgba(88,166,255,0.1);border-radius:2px;overflow:hidden;height:14px;">
+            <div style="width:2%;background:#58a6ff;height:100%;border-radius:2px;"></div>
+          </div>
+          <span style="color:#8b949e;width:36px;">2.0%</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:11px;">
+          <span style="width:36px;color:#6e7681;text-align:right;">6+</span>
+          <div style="flex:1;background:rgba(88,166,255,0.1);border-radius:2px;overflow:hidden;height:14px;">
+            <div style="width:0.5%;background:#58a6ff;height:100%;border-radius:2px;"></div>
+          </div>
+          <span style="color:#8b949e;width:36px;">0.5%</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- INSIGHT -->
+  <div class="insight blue">
+    <strong>What this tells us about each group:</strong><br><br>
+    <strong>Nine subscribers</strong> — the median of 6 total visits over 26 months means a typical subscriber comes roughly once every 4 months. They are not high-frequency visitors but they are consistent. The 27% who visited 6–10 times are your core engaged segment. The 31 who enrolled but never visited are a reactivation opportunity for Layer 2.<br><br>
+    <strong>Treated non-Nine (Group B)</strong> — the median of 2 total visits and 1 active month tells a clear story: most come for a specific treatment, complete it in one or two visits, and leave. 37.5% visited only once. These are transactional patients. The 241 who visited 6–10 times and still did not convert to Nine are the most important conversion target in the entire dataset.<br><br>
+    <strong>Consultation only (Group C)</strong> — 50% never returned after their free consultation. Of those who did come back, 40% visited exactly once more. However, 76 patients in this group visited 3 or more times without ever paying — these are engaged but unconverted. They are a Layer 2 priority for follow-up and Nine conversion.
+  </div>
+</div>
+
+<!-- 08 FULL TABLE -->
+<div class="section" id="table">
+  <div class="section-head"><span class="s-num">08</span><h2 class="s-title">Complete Monthly Data Table</h2></div>
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Month</th>
+          <th>Total Revenue</th>
+          <th>Nine Co-pay</th>
+          <th>Regular Rev</th>
+          <th>Nine %</th>
+          <th>Total Appts</th>
+          <th>Nine Appts</th>
+          <th>Nine Active</th>
+          <th>New Patients</th>
+          <th>New Nine</th>
+          <th>Conv %</th>
+          <th>Rev / Appt</th>
+          <th>Cumul Nine</th>
+          <th>Refunds</th>
+        </tr>
+      </thead>
+      <tbody id="layer1_tBody"></tbody>
+    </table>
+  </div>
+</div>
+
+
+<!-- YoY SUMMARY -->
+<div class="section" id="yoy">
+  <div class="section-head"><span class="s-num">YoY</span><h2 class="s-title">2024 vs 2025 — Year-Over-Year Summary</h2></div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px;margin-bottom:24px;">
+
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:20px;text-align:center;">
+      <div style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:12px;">Total Revenue</div>
+      <div style="display:flex;justify-content:space-around;margin-bottom:8px;">
+        <div><div style="font-size:11px;color:var(--dim)">2024</div><div style="font-size:20px;font-weight:700;color:var(--muted)">1.95M</div></div>
+        <div style="display:flex;align-items:center;font-size:18px;color:var(--dim)">→</div>
+        <div><div style="font-size:11px;color:var(--nine)">2025</div><div style="font-size:20px;font-weight:700;color:var(--nine)">4.88M</div></div>
+      </div>
+      <div style="background:var(--green-bg);border-radius:20px;padding:3px 12px;display:inline-block;font-size:12px;font-weight:600;color:var(--green)">+150.6%</div>
+    </div>
+
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:20px;text-align:center;">
+      <div style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:12px;">Total Appointments</div>
+      <div style="display:flex;justify-content:space-around;margin-bottom:8px;">
+        <div><div style="font-size:11px;color:var(--dim)">2024</div><div style="font-size:20px;font-weight:700;color:var(--muted)">3,704</div></div>
+        <div style="display:flex;align-items:center;font-size:18px;color:var(--dim)">→</div>
+        <div><div style="font-size:11px;color:var(--nine)">2025</div><div style="font-size:20px;font-weight:700;color:var(--nine)">9,263</div></div>
+      </div>
+      <div style="background:var(--green-bg);border-radius:20px;padding:3px 12px;display:inline-block;font-size:12px;font-weight:600;color:var(--green)">+150.1%</div>
+    </div>
+
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:20px;text-align:center;">
+      <div style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:12px;">New Patients</div>
+      <div style="display:flex;justify-content:space-around;margin-bottom:8px;">
+        <div><div style="font-size:11px;color:var(--dim)">2024</div><div style="font-size:20px;font-weight:700;color:var(--muted)">1,697</div></div>
+        <div style="display:flex;align-items:center;font-size:18px;color:var(--dim)">→</div>
+        <div><div style="font-size:11px;color:var(--nine)">2025</div><div style="font-size:20px;font-weight:700;color:var(--nine)">3,395</div></div>
+      </div>
+      <div style="background:var(--green-bg);border-radius:20px;padding:3px 12px;display:inline-block;font-size:12px;font-weight:600;color:var(--green)">+100.1%</div>
+    </div>
+
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:20px;text-align:center;">
+      <div style="font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:12px;">Nine Conversion Rate</div>
+      <div style="display:flex;justify-content:space-around;margin-bottom:8px;">
+        <div><div style="font-size:11px;color:var(--dim)">2024</div><div style="font-size:20px;font-weight:700;color:var(--muted)">1.4%</div></div>
+        <div style="display:flex;align-items:center;font-size:18px;color:var(--dim)">→</div>
+        <div><div style="font-size:11px;color:var(--nine)">2025</div><div style="font-size:20px;font-weight:700;color:var(--nine)">14.2%</div></div>
+      </div>
+      <div style="background:var(--green-bg);border-radius:20px;padding:3px 12px;display:inline-block;font-size:12px;font-weight:600;color:var(--green)">10× improvement</div>
+    </div>
+
+  </div>
+
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:14px;">
+    <div style="font-size:13px;font-weight:600;color:var(--text2);margin-bottom:3px;">New Nine Subscribers by Year</div>
+    <div style="font-size:11px;color:var(--muted);margin-bottom:16px;">2024: 23 subscribers · 2025: 483 subscribers · 2026 so far (Jan–Feb): 84 subscribers</div>
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:8px;">
+      <span style="font-size:11px;color:var(--muted);width:60px">2024</span>
+      <div style="flex:1;background:rgba(255,255,255,.05);border-radius:3px;overflow:hidden;height:22px;">
+        <div style="width:4.6%;background:var(--dim);height:100%;border-radius:3px;display:flex;align-items:center;padding-left:8px;">
+        </div>
+      </div>
+      <span style="font-size:12px;font-weight:600;color:var(--dim);width:60px">23</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:8px;">
+      <span style="font-size:11px;color:var(--muted);width:60px">2025</span>
+      <div style="flex:1;background:rgba(255,255,255,.05);border-radius:3px;overflow:hidden;height:22px;">
+        <div style="width:96.6%;background:var(--nine);height:100%;border-radius:3px;display:flex;align-items:center;padding-left:8px;">
+        </div>
+      </div>
+      <span style="font-size:12px;font-weight:600;color:var(--nine);width:60px">483</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:16px;">
+      <span style="font-size:11px;color:var(--muted);width:60px">2026 YTD</span>
+      <div style="flex:1;background:rgba(255,255,255,.05);border-radius:3px;overflow:hidden;height:22px;">
+        <div style="width:16.8%;background:var(--gold);height:100%;border-radius:3px;display:flex;align-items:center;padding-left:8px;">
+        </div>
+      </div>
+      <span style="font-size:12px;font-weight:600;color:var(--gold);width:60px">84</span>
+    </div>
+  </div>
+
+  <div class="insight blue">
+    <strong>2025 was the year Nine became real.</strong> Revenue grew 150.6% and appointments grew 150.1% — both more than doubling. But the most significant number is the Nine conversion rate: from 1.4% in 2024 to 14.2% in 2025. This is a 10× improvement that signals the offer, the pitch, and patient awareness all matured significantly. <strong>2026 must sustain and accelerate this conversion rate while solving the capacity challenge that comes with a growing subscriber base.</strong>
+  </div>
+</div>
+</div>
+<div id="panel-layer2" class="layer-panel" style="display:none">
+<div class="header">
+  <div>
+    <div class="h-label">Layer 2 — Patient Behavior Analysis</div>
+    <h1 class="h-title">Who Are Our Patients<br><span>and Who Should We Target?</span></h1>
+    <p class="h-desc">Four questions answered: how the three patient groups behave differently, what a Nine subscriber is actually worth annually, who the consultation-only patients are demographically, and which 426 non-Nine patients should be called first for Nine conversion.</p>
+  </div>
+  <div class="h-meta">
+    <div class="meta-row"><strong>Group A — Nine:</strong> 591 subscribers</div>
+    <div class="meta-row"><strong>Group B — Treated:</strong> 1,879 patients</div>
+    <div class="meta-row"><strong>Group C — Consult only:</strong> 2,983 patients</div>
+    <div class="meta-row"><strong>Conversion targets:</strong> 426 patients</div>
+    <div class="meta-row"><strong>Period:</strong> Jan 2024 – Feb 2026</div>
+  </div>
+</div>
+
+<!-- Q1: BEHAVIOR COMPARISON -->
+<div class="section" id="q1">
+  <div class="s-head"><span class="s-num">Q1</span><h2 class="s-title">How the Three Groups Actually Behave</h2></div>
+
+  <div class="note">
+    <strong>Why median, not average:</strong> A small number of patients visit very frequently or spend very large amounts. These outliers pull the average up and make the typical patient look more engaged than they are. Median gives you the middle value — what a typical patient in each group actually does. Where mean is shown, it is for reference only.
+  </div>
+
+  <div class="group-cards">
+    <div class="group-card a">
+      <div class="gc-tag c-nine">Group A</div>
+      <div class="gc-name">Nine Subscribers · 591</div>
+      <div class="gc-row"><span class="gc-label">Median total visits</span><span class="gc-val c-nine">6</span></div>
+      <div class="gc-row"><span class="gc-label">Mean total visits</span><span class="gc-val t-muted">7.3</span></div>
+      <div class="gc-row"><span class="gc-label">Median active months</span><span class="gc-val c-nine">2</span></div>
+      <div class="gc-row"><span class="gc-label">Median co-pay spend</span><span class="gc-val c-nine">2,348 SAR</span></div>
+      <div class="gc-row"><span class="gc-label">Median last 6mo visits</span><span class="gc-val c-green">5</span></div>
+      <div class="gc-row"><span class="gc-label">Never visited</span><span class="gc-val c-red">5.2%</span></div>
+    </div>
+    <div class="group-card b">
+      <div class="gc-tag c-gold">Group B</div>
+      <div class="gc-name">Treated Non-Nine · 1,879</div>
+      <div class="gc-row"><span class="gc-label">Median total visits</span><span class="gc-val c-gold">2</span></div>
+      <div class="gc-row"><span class="gc-label">Mean total visits</span><span class="gc-val t-muted">4.6</span></div>
+      <div class="gc-row"><span class="gc-label">Median active months</span><span class="gc-val c-gold">1</span></div>
+      <div class="gc-row"><span class="gc-label">Median co-pay spend</span><span class="gc-val c-gold">560 SAR</span></div>
+      <div class="gc-row"><span class="gc-label">Median last 6mo visits</span><span class="gc-val t-muted">0</span></div>
+      <div class="gc-row"><span class="gc-label">Never visited</span><span class="gc-val c-green">0%</span></div>
+    </div>
+    <div class="group-card c">
+      <div class="gc-tag" style="color:var(--dim)">Group C</div>
+      <div class="gc-name">Consultation Only · 2,983</div>
+      <div class="gc-row"><span class="gc-label">Median total visits</span><span class="gc-val" style="color:var(--dim)">0</span></div>
+      <div class="gc-row"><span class="gc-label">Mean total visits</span><span class="gc-val t-muted">0.7</span></div>
+      <div class="gc-row"><span class="gc-label">Median active months</span><span class="gc-val" style="color:var(--dim)">0</span></div>
+      <div class="gc-row"><span class="gc-label">Median co-pay spend</span><span class="gc-val" style="color:var(--dim)">0 SAR</span></div>
+      <div class="gc-row"><span class="gc-label">Median last 6mo visits</span><span class="gc-val t-muted">0</span></div>
+      <div class="gc-row"><span class="gc-label">Never came back</span><span class="gc-val c-red">50.1%</span></div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="cc">
+      <div class="cc-t">Median Total Visits by Group</div>
+      <div class="cc-s">Nine subscribers visit 3× more than treated patients, 6× Group C</div>
+      <canvas id="layer2_cVisits"></canvas>
+    </div>
+    <div class="cc">
+      <div class="cc-t">Median Co-pay Spend by Group (SAR)</div>
+      <div class="cc-s">Nine subscribers spend 4× more in co-pays than treated non-Nine</div>
+      <canvas id="layer2_cSpend"></canvas>
+    </div>
+  </div>
+
+  <div class="insight blue">
+    <strong>Key finding:</strong> The behavioral gap between Nine and non-Nine is stark. The median Nine subscriber has 6 visits and 2,348 SAR in co-pays. The median treated non-Nine patient has 2 visits and 560 SAR. Group C's median is zero on both counts — half of all consultation patients never returned after their free consult. <strong>Most importantly: Nine subscribers had a median of 5 visits in just the last 6 months — they are your most active and engaged patients by a wide margin.</strong>
+  </div>
+</div>
+
+<!-- Q2: NINE LTV -->
+<div class="section" id="q2">
+  <div class="s-head"><span class="s-num">Q2</span><h2 class="s-title">Nine Subscriber Annual Value — What One Member Is Worth</h2></div>
+
+  <div class="note">
+    <strong>Why only 60 subscribers have a full 12-month record — and why this matters:</strong><br><br>
+    Our data runs to February 2026. To measure a complete 12-month window, a subscriber must have joined Nine by February 2025 at the latest. The problem: <strong>81.7% of all Nine subscribers joined in 2025</strong>, most of them in the second half of the year. Their first year is simply not yet in our dataset.<br><br>
+    The breakdown: <strong>2024 joiners:</strong> 23 patients — all 17 with payments have a full year · <strong>Early 2025 (Jan–Jun):</strong> 67 patients — 43 have a full year · <strong>Late 2025 (Jul–Dec):</strong> 295 patients — <em>zero</em> have a full year yet · <strong>2026:</strong> 105 patients — zero have a full year.<br><br>
+    <strong>What the 5,038 SAR figure actually represents:</strong> Your earliest and most engaged subscribers — people who joined when Nine was new. They may be more motivated than average. The true population annual value sits between the 810 SAR all-subscriber median (understated because most years are incomplete) and the 5,038 SAR full-year median (potentially overstated due to early adopter bias).<br><br>
+    <strong>Board guidance:</strong> Use 5,038 SAR as the best available estimate, stated clearly as based on 60 early subscribers. By Q3 2026, over 400 subscribers will have complete 12-month records and this figure can be validated or revised with high confidence.
+  </div>
+
+  <div style="background:var(--card);border:1px solid var(--border);border-left:3px solid var(--nine);border-radius:8px;padding:16px 22px;margin-bottom:20px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;">
+    <div>
+      <div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:6px;">Nine Revenue in File (2.36M SAR)</div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+        <div style="flex:1;background:rgba(255,255,255,.05);border-radius:3px;overflow:hidden;height:16px;">
+          <div style="width:93.5%;background:var(--nine);height:100%;border-radius:3px;"></div>
+        </div>
+        <span style="font-size:12px;font-weight:600;color:var(--nine);width:40px">93.5%</span>
+      </div>
+      <div style="font-size:11px;color:var(--muted);">Co-pay procedures: <strong style="color:var(--nine)">2,210,175 SAR</strong></div>
+      <div style="display:flex;align-items:center;gap:8px;margin:4px 0;">
+        <div style="flex:1;background:rgba(255,255,255,.05);border-radius:3px;overflow:hidden;height:16px;">
+          <div style="width:6.5%;background:var(--gold);height:100%;border-radius:3px;"></div>
+        </div>
+        <span style="font-size:12px;font-weight:600;color:var(--gold);width:40px">6.5%</span>
+      </div>
+      <div style="font-size:11px;color:var(--muted);">Membership fees recorded: <strong style="color:var(--gold)">153,000 SAR</strong></div>
+    </div>
+    <div>
+      <div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:6px;">Why Co-pay Dominates</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.7;">The 1,500 SAR annual membership fee is paid once per year. The 2.36M SAR reflects 26 months of both membership payments and all cosmetic and implant procedure charges. Co-pays make up 93.5% of Nine revenue in the file because patients pay for procedures every time they visit.</div>
+    </div>
+    <div>
+      <div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:6px;">LTV Coverage by Cohort</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.9;">
+        <span style="color:var(--green)">●</span> 2024 joiners: 17 — <strong style="color:var(--text2)">100% have full year</strong><br>
+        <span style="color:var(--nine)">●</span> Early 2025: 67 — <strong style="color:var(--text2)">64% have full year</strong><br>
+        <span style="color:var(--gold)">●</span> Late 2025: 295 — <strong style="color:var(--red)">0% have full year</strong><br>
+        <span style="color:var(--dim)">●</span> 2026: 105 — <strong style="color:var(--red)">0% have full year</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi blue">
+      <div class="kpi-l">Annual Membership Fee</div>
+      <div class="kpi-v c-nine">1,500 SAR</div>
+      <div class="kpi-s">paid upfront · confirmed in data</div>
+    </div>
+    <div class="kpi green">
+      <div class="kpi-l">Median Year 1 Co-pay</div>
+      <div class="kpi-v c-green">3,538 SAR</div>
+      <div class="kpi-s">60 subscribers with full 12-month window</div>
+    </div>
+    <div class="kpi gold">
+      <div class="kpi-l">Median Total Annual Value</div>
+      <div class="kpi-v c-gold">5,038 SAR</div>
+      <div class="kpi-s">membership + co-pay · per subscriber</div>
+    </div>
+    <div class="kpi purple">
+      <div class="kpi-l">Mean Total Annual Value</div>
+      <div class="kpi-v c-purple">7,143 SAR</div>
+      <div class="kpi-s">inflated by high spenders · use median</div>
+    </div>
+    <div class="kpi red">
+      <div class="kpi-l">Zero Co-pay (membership only)</div>
+      <div class="kpi-v c-red">20%</div>
+      <div class="kpi-s">of full-year subscribers · 1,500 SAR only</div>
+    </div>
+    <div class="kpi green">
+      <div class="kpi-l">Spent 5,000+ SAR Co-pay</div>
+      <div class="kpi-v c-green">43%</div>
+      <div class="kpi-s">of full-year subscribers · high value</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="cc">
+      <div class="cc-t">Year 1 Co-pay Distribution (Full-Year Subscribers)</div>
+      <div class="cc-s">60 subscribers with complete 12-month window · SAR bands</div>
+      <canvas id="layer2_cCopayDist"></canvas>
+    </div>
+    <div class="cc">
+      <div class="cc-t">Median Co-pay Spend by Join Cohort</div>
+      <div class="cc-s">Earlier joiners have more data — and spend more</div>
+      <canvas id="layer2_cCohort"></canvas>
+    </div>
+  </div>
+
+  <div class="cc">
+    <div class="cc-t">Median Co-pay Spend by Segment — Who to Prioritize for Nine Conversion</div>
+    <div class="cc-s">All 591 Nine subscribers · median SAR co-pay spend since joining</div>
+    <div class="grid-2" style="margin-top:4px">
+      <div>
+        <div style="font-size:11px;color:var(--muted);margin-bottom:10px;font-weight:500;">BY REFERRAL SOURCE</div>
+        <canvas id="layer2_cByRef"></canvas>
+      </div>
+      <div>
+        <div style="font-size:11px;color:var(--muted);margin-bottom:10px;font-weight:500;">BY AGE GROUP</div>
+        <canvas id="layer2_cByAge"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight gold">
+    <strong>Key finding — targeting implication:</strong> The median Nine subscriber is worth 5,038 SAR per year to the clinic. But segments vary significantly. <strong>Doctor-referred Nine subscribers have a median co-pay of 2,718 SAR — nearly 4× higher than family-and-friends referrals (720 SAR).</strong> Age 26–35 is your highest-spending segment at 1,222 SAR median co-pay. This means when recruiting new Nine subscribers, prioritize doctor referral channels and the 26–35 age group — they generate the most value beyond the membership fee.
+  </div>
+</div>
+
+<!-- Q3: GROUP C PROFILE -->
+<div class="section" id="q3">
+  <div class="s-head"><span class="s-num">Q3</span><h2 class="s-title">Consultation-Only Patients — Who Are They?</h2></div>
+
+  <div class="kpi-grid">
+    <div class="kpi">
+      <div class="kpi-l">Total Group C</div>
+      <div class="kpi-v">2,983</div>
+      <div class="kpi-s">registered · free consultation only</div>
+    </div>
+    <div class="kpi red">
+      <div class="kpi-l">Never Returned</div>
+      <div class="kpi-v c-red">1,493</div>
+      <div class="kpi-s">50.1% · one consult and gone</div>
+    </div>
+    <div class="kpi gold">
+      <div class="kpi-l">Came Back Once</div>
+      <div class="kpi-v c-gold">1,196</div>
+      <div class="kpi-s">40.1% · one follow-up visit</div>
+    </div>
+    <div class="kpi blue">
+      <div class="kpi-l">3+ Visits, Still No Nine</div>
+      <div class="kpi-v c-nine">76</div>
+      <div class="kpi-s">engaged but unconverted · priority</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="cc">
+      <div class="cc-t">Group C vs Nine — Age Distribution Comparison</div>
+      <div class="cc-s">Consultation patients and Nine subscribers are almost identical by age</div>
+      <canvas id="layer2_cAgeComp"></canvas>
+    </div>
+    <div class="cc">
+      <div class="cc-t">Group C vs Nine — Referral Source Comparison</div>
+      <div class="cc-s">Same referral mix — barrier is not who they are, it's what happens at consult</div>
+      <canvas id="layer2_cRefComp"></canvas>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="cc">
+      <div class="cc-t">Group C — Gender Split</div>
+      <div class="cc-s">2,983 consultation-only patients</div>
+      <canvas id="layer2_cGenderC"></canvas>
+    </div>
+    <div class="cc">
+      <div class="cc-t">Group C — Nationality Split</div>
+      <div class="cc-s">Saudi vs non-Saudi</div>
+      <canvas id="layer2_cNatC"></canvas>
+    </div>
+  </div>
+
+  <div class="insight blue">
+    <strong>Most important finding in Q3:</strong> The demographic profile of consultation-only patients is almost identical to Nine subscribers — same age distribution, same referral sources, same gender and nationality mix. <strong>Group C patients are not a different type of person. They are the same person who just did not convert at the consultation stage.</strong> This means the problem is not who you are attracting — it is what happens in the room when the treatment plan is presented.<br><br>
+    <strong>The opportunity this creates:</strong> A 5% improvement in consultation-to-treatment conversion on 2,983 Group C patients generates <strong>149 new treated patients</strong>. A 10% improvement generates <strong>298</strong>. If half of those convert to Nine, that is <strong>74 to 149 new Nine subscribers</strong> — without acquiring a single new patient. This is the second highest-leverage action available after the 426 Group B targets. The investment required is not marketing spend, it is a better consultation process.
+  </div>
+</div>
+
+<!-- Q4: CONVERSION TARGETS -->
+<div class="section" id="q4">
+  <div class="s-head"><span class="s-num">Q4</span><h2 class="s-title">426 Non-Nine Patients Ready for Nine Conversion</h2></div>
+
+  <div class="note">
+    <strong>Selection criteria:</strong> From 1,879 treated non-Nine patients (Group B), patients qualify if they meet all three conditions: (1) 3 or more total visits, (2) at least one visit between Aug-25 and Feb-26, (3) 500+ SAR paid in total. These are engaged, recent, and financially committed — the three strongest signals of Nine conversion readiness.
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi blue">
+      <div class="kpi-l">Qualifying Targets</div>
+      <div class="kpi-v c-nine">426</div>
+      <div class="kpi-s">out of 1,879 Group B patients</div>
+    </div>
+    <div class="kpi gold">
+      <div class="kpi-l">Median Total Visits</div>
+      <div class="kpi-v c-gold">8</div>
+      <div class="kpi-s">highly engaged · Nine-level behavior</div>
+    </div>
+    <div class="kpi gold">
+      <div class="kpi-l">Median Total Spend</div>
+      <div class="kpi-v c-gold">4,670 SAR</div>
+      <div class="kpi-s">already spending at Nine-subscriber level</div>
+    </div>
+    <div class="kpi green">
+      <div class="kpi-l">Median Last 6mo Visits</div>
+      <div class="kpi-v c-green">4</div>
+      <div class="kpi-s">active right now · warm to contact</div>
+    </div>
+    <div class="kpi green">
+      <div class="kpi-l">Median Last 6mo Spend</div>
+      <div class="kpi-v c-green">1,500 SAR</div>
+      <div class="kpi-s">equivalent to Nine membership fee</div>
+    </div>
+    <div class="kpi purple">
+      <div class="kpi-l">If All Convert · Revenue</div>
+      <div class="kpi-v c-purple">639K SAR</div>
+      <div class="kpi-s">426 × 1,500 SAR membership fees</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="cc">
+      <div class="cc-t">Target Patients — Age Distribution</div>
+      <div class="cc-s">426 qualifying Group B patients</div>
+      <canvas id="layer2_cTargetAge"></canvas>
+    </div>
+    <div class="cc">
+      <div class="cc-t">Target Patients — Referral Source</div>
+      <div class="cc-s">Where these high-value targets came from</div>
+      <canvas id="layer2_cTargetRef"></canvas>
+    </div>
+  </div>
+
+  <div class="insight green">
+    <strong>Action insight:</strong> These 426 patients are already behaving like Nine subscribers. They visit frequently, they spend significantly, and they were active in the last 6 months. The conversation is simple: <em>"You've visited us 8 times and spent over 4,600 SAR — for 1,500 SAR you could have been on Nine the whole time and saved money."</em> <strong>The top 50 patients by spend are listed below and should be contacted first — several have spent 30,000–70,000 SAR without a Nine membership.</strong>
+  </div>
+
+  <!-- FILTER + TABLE -->
+  <div style="margin-top:24px">
+    <div style="background:var(--red-bg);border:1px solid rgba(248,81,73,.25);border-radius:8px;padding:16px 20px;margin-bottom:18px;">
+      <div style="font-size:13px;font-weight:600;color:var(--red);margin-bottom:6px;">These patients are already paying Nine-level amounts — without the membership</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.7;">File #2590 visited <strong style="color:var(--text2)">30 times</strong> and paid <strong style="color:var(--text2)">70,910 SAR</strong> without Nine. File #4928 paid <strong style="color:var(--text2)">65,000 SAR</strong>. File #357 made <strong style="color:var(--text2)">44 visits</strong>. The conversation is straightforward: <em>"You've visited us 8 times and spent over 4,600 SAR — for 1,500 SAR annually you could be on Nine and have full access to the program."</em> Hot priority patients visited 5+ times in the last 6 months and paid 10,000+ SAR total.</div>
+    </div>
+    <div style="font-size:14px;font-weight:600;margin-bottom:14px;">Top 50 Conversion Targets — Sorted by Total Spend</div>
+    <div class="search-wrap">
+      <input class="search-input" id="layer2_searchInput" placeholder="Search by file number, age, gender..." oninput="filterTable()">
+      <span class="filter-count" id="layer2_filterCount">Showing 50 patients</span>
+    </div>
+    <div class="tbl-wrap">
+      <table id="layer2_targetTable">
+        <thead>
+          <tr>
+            <th>File #</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Nationality</th>
+            <th>Referred By</th>
+            <th>Total Visits</th>
+            <th>Total Spend (SAR)</th>
+            <th>Last 6mo Visits</th>
+            <th>Last 6mo Spend</th>
+            <th>Priority</th>
+          </tr>
+        </thead>
+        <tbody id="layer2_targetBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+<div id="panel-layer3" class="layer-panel" style="display:none">
+<div class="header">
+  <div class="h-label">Layer 3 — Segmentation & Channel Analysis</div>
+  <h1 class="h-title">Two Separate Questions.<br><span>One Clear Answer Each.</span></h1>
+
+  <div style="height:16px"></div>
+
+  <div class="distinction">
+    <div class="dist-side left">
+      <div class="dist-icon">📣</div>
+      <div class="dist-q">Marketing Question</div>
+      <div class="dist-title marketing">Which channels bring patients to Alba?</div>
+      <div class="dist-desc">Channel is how a patient first hears about the clinic — family recommendation, Google, promotion, doctor referral. This is a marketing and acquisition question. The clinic influences it through where it spends its advertising budget and which referral relationships it builds.</div>
+      <div class="dist-owner m">Owned by: Marketing</div>
+    </div>
+    <div class="dist-side right">
+      <div class="dist-icon">🦷</div>
+      <div class="dist-q">Sales & Clinical Question</div>
+      <div class="dist-title sales">Which patients, once inside, become Nine subscribers?</div>
+      <div class="dist-desc">Nine conversion happens inside the clinic — it depends on the dentist explaining the program, the quality of the patient's experience, and the patient's own readiness to invest in their dental health. Channel has almost nothing to do with it. This is a clinical and sales conversation question.</div>
+      <div class="dist-owner s">Owned by: Clinical Team</div>
+    </div>
+  </div>
+</div>
+
+<!-- PART 1: CHANNELS -->
+<div class="section" id="layer3_channels">
+  <div class="s-head"><span class="s-num marketing">Part 1 · Marketing</span><h2 class="s-title">Channels — Where Do Alba's Patients Come From?</h2></div>
+  <div class="s-question"><strong>The question being answered:</strong> Which channels bring the most patients to Alba, and once they arrive, how engaged do those patients become? This tells you where to invest marketing budget to grow patient volume.</div>
+
+  <div class="kpi-grid">
+    <div class="kpi gold">
+      <div class="kpi-l">Largest Channel</div>
+      <div class="kpi-v c-gold">Family & Friends</div>
+      <div class="kpi-s">3,591 patients · 65.8% of all registrations</div>
+    </div>
+    <div class="kpi gold">
+      <div class="kpi-l">Second Channel</div>
+      <div class="kpi-v c-gold">Promotion</div>
+      <div class="kpi-s">1,619 patients · 29.7% of registrations</div>
+    </div>
+    <div class="kpi green">
+      <div class="kpi-l">Stickiest Channel</div>
+      <div class="kpi-v c-green">Doctor Referral</div>
+      <div class="kpi-s">42.1% return 3+ times — highest retention</div>
+    </div>
+    <div class="kpi blue">
+      <div class="kpi-l">Total Patients</div>
+      <div class="kpi-v c-nine">5,453</div>
+      <div class="kpi-s">across all channels · Jan 2024 – Feb 2026</div>
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Channel</th>
+          <th>Total Patients</th>
+          <th>% of All Patients</th>
+          <th>Visited at Least Once</th>
+          <th>Returned 3+ Times</th>
+          <th>Stickiness</th>
+        </tr>
+      </thead>
+      <tbody id="layer3_chanBody"></tbody>
+    </table>
+  </div>
+  <div class="interp gold"><strong>Stickiness = % of patients from that channel who visited 3 or more times.</strong> A sticky patient is one who came back repeatedly — they trust Alba and are engaging with treatment. This is the most useful marketing metric: not just how many patients a channel brings, but how many of them stay.</div>
+
+  <div class="grid-2">
+    <div class="cc">
+      <div class="cc-t">Patient Volume by Channel</div>
+      <div class="cc-s">Total patients registered from each source</div>
+      <canvas id="layer3_cChanVol"></canvas>
+      <div class="interp gold"><strong>Family & friends dominates at 65.8%</strong> of all patients — Alba's growth so far has been almost entirely word-of-mouth. Promotions brought 29.3%. All other channels combined are less than 5%. This tells you the clinic has not yet invested meaningfully in digital or professional referral channels.</div>
+    </div>
+    <div class="cc">
+      <div class="cc-t">Patient Stickiness by Channel — % Who Returned 3+ Times</div>
+      <div class="cc-s">Of all patients from each channel, what % visited the clinic 3 or more times</div>
+      <canvas id="layer3_cChanStick"></canvas>
+      <div class="interp gold"><strong>Doctor-referred patients are by far the stickiest</strong> — 42.1% returned 3+ times, more than twice the rate of family & friends (27.7%) and promotions (20.3%). A patient referred by a doctor arrives with a specific treatment need and a higher level of trust, making them more likely to continue treatment. TikTok and Neighbor channels produce low stickiness.</div>
+    </div>
+  </div>
+
+  <div class="insight gold">
+    <strong>Channel conclusion for marketing:</strong> Alba's patient base was built almost entirely on word-of-mouth and promotions — channels that are effective but hard to scale. Doctor referrals bring far fewer patients (76 total) but those patients are significantly more engaged and sticky. <strong>The marketing decision for 2026 is whether to invest in building a formal doctor referral program. The data supports it strongly on engagement quality — but volume will remain limited unless the referring physician network is actively built.</strong>
+  </div>
+</div>
+
+<!-- PART 2: NINE CONVERSION -->
+<div class="section" id="layer3_conversion">
+  <div class="s-head"><span class="s-num sales">Part 2 · Clinical Team</span><h2 class="s-title">Nine Conversion — Which Patients Become Subscribers?</h2></div>
+  <div class="s-question"><strong>The question being answered:</strong> Among all patients who walk into Alba, what type of patient becomes a Nine subscriber? This is not a marketing question. Channel does not drive this. It is driven by the dentist's explanation of Nine, the patient's experience, and the patient's own profile. The clinical team owns this number.</div>
+
+  <div class="kpi-grid">
+    <div class="kpi blue">
+      <div class="kpi-l">Overall Conversion Rate</div>
+      <div class="kpi-v c-nine">10.8%</div>
+      <div class="kpi-s">591 of 5,453 total patients</div>
+    </div>
+    <div class="kpi blue">
+      <div class="kpi-l">Best Age Group</div>
+      <div class="kpi-v c-nine">18–25 & 46–55</div>
+      <div class="kpi-s">both at 11.6% conversion rate</div>
+    </div>
+    <div class="kpi green">
+      <div class="kpi-l">Saudi Conversion Rate</div>
+      <div class="kpi-v c-green">11.9%</div>
+      <div class="kpi-s">vs 4.1% for non-Saudi patients</div>
+    </div>
+    <div class="kpi blue">
+      <div class="kpi-l">Female vs Male</div>
+      <div class="kpi-v c-nine">11.2% vs 10.4%</div>
+      <div class="kpi-s">small gap · both convert similarly</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="cc">
+      <div class="cc-t">Nine Conversion Rate by Age Group</div>
+      <div class="cc-s">Of all patients in each age group, what % became Nine subscribers</div>
+      <canvas id="layer3_cAgeConv"></canvas>
+      <div class="interp blue"><strong>Conversion rates are remarkably consistent across age groups</strong> — ranging from 10.8% to 11.6% for all adults. The only outlier is Under 18 at 7.5%, which makes sense as subscription decisions for minors involve parents. <strong>This tells your clinical team something important: Nine is not easier to sell to one age group than another. The dentist's explanation and the patient's in-clinic experience matters equally across all adult ages.</strong></div>
+    </div>
+    <div class="cc">
+      <div class="cc-t">Nine Conversion Rate by Nationality</div>
+      <div class="cc-s">Saudi vs non-Saudi patients</div>
+      <canvas id="layer3_cNatConv"></canvas>
+      <div class="interp blue"><strong>Saudi patients convert at nearly 3× the rate of non-Saudi patients</strong> (11.9% vs 4.1%). This is the most significant conversion gap in the data. It likely reflects both cultural familiarity with subscription models and the fact that Nine's cosmetic focus aligns more closely with the aesthetic preferences of Saudi patients. Non-Saudi patients are not a poor target — but the conversation may need to be adapted.</div>
+    </div>
+  </div>
+
+  <div class="insight blue">
+    <strong>Conversion conclusion for the clinical team:</strong> Nine conversion is nearly uniform across age groups and only slightly higher for females. The one major differentiator is nationality — Saudi patients convert at 11.9% vs 4.1% for non-Saudi. <strong>The implication is that the dentist's pitch is the variable that matters most, not who the patient is. A consistent, well-trained explanation of Nine — delivered to every adult patient regardless of age or gender — will move the conversion rate. There is no evidence that the current team is selectively pitching Nine to the "right" patients. The data suggests they are pitching it uniformly, which is correct.</strong>
+  </div>
+</div>
+
+<!-- PART 3: SUBSCRIBER VALUE -->
+<div class="section" id="value">
+  <div class="s-head"><span class="s-num value">Part 3 · Revenue</span><h2 class="s-title">Subscriber Value — Who Spends the Most Once Subscribed?</h2></div>
+  <div class="s-question"><strong>The question being answered:</strong> Among the 591 Nine subscribers, which patient profiles generate the most co-pay revenue on top of their membership fee? This tells you which segments to prioritise when designing promotions, treatment plans, and upsell conversations.</div>
+
+  <div class="grid-3">
+    <div class="cc">
+      <div class="cc-t">Median Co-pay by Age Group</div>
+      <div class="cc-s">591 Nine subscribers · SAR</div>
+      <canvas id="layer3_cAgeVal"></canvas>
+      <div class="interp purple"><strong>26–35 year olds spend the most</strong> at 2,728 SAR median — they are the prime cosmetic procedure age. The 46–55 group is close behind at 2,488 SAR. Under-18 patients spend least at 1,960 SAR. Target cosmetic treatment conversations at 26–45 year old subscribers.</div>
+    </div>
+    <div class="cc">
+      <div class="cc-t">% of Subscribers Who Spent 3,000+ SAR</div>
+      <div class="cc-s">High-value co-pay patients by age group</div>
+      <canvas id="layer3_cHighSpend"></canvas>
+      <div class="interp purple"><strong>45% of 26–35 subscribers exceeded 3,000 SAR in co-pays</strong> — nearly half. The 46–55 group follows at 43.5%. These patients pursue premium cosmetic and implant procedures. They represent the highest-value subscribers the clinic has.</div>
+    </div>
+    <div class="cc">
+      <div class="cc-t">Median Co-pay by Gender & Nationality</div>
+      <div class="cc-s">Co-pay spend comparison</div>
+      <canvas id="layer3_cGenNat"></canvas>
+      <div class="interp purple"><strong>Male subscribers spend 5.5% more than female</strong> (2,432 vs 2,305 SAR) — a small difference that does not change targeting strategy. <strong>Saudi subscribers spend 37% more than non-Saudi</strong> (2,364 vs 1,725 SAR) — a meaningful gap that reflects different treatment preferences and purchasing power.</div>
+    </div>
+  </div>
+
+  <div class="insight purple">
+    <strong>Value conclusion:</strong> The highest co-pay revenue comes from Saudi subscribers aged 26–35 and 46–55. Both groups have high rates of premium procedure uptake. When designing Nine marketing, promotions, or referral incentives, these two age segments in the Saudi market should be the primary target. They convert at average rates but spend significantly above average once subscribed.
+  </div>
+</div>
+
+<!-- INSURANCE MODEL -->
+<div class="section" id="insurance">
+  <div class="s-head"><span class="s-num insurance">Note · Strategy</span><h2 class="s-title">Nine Works Like Insurance — The Guaranteed Revenue Engine</h2></div>
+  <div class="s-question"><strong>The question being answered:</strong> Does growing the subscriber base create a capacity problem? The answer is no — because Nine operates like insurance. The clinic collects membership fees from all subscribers, but only a fraction visit in any given month. The non-visiting subscribers generate pure revenue with zero clinical cost.</div>
+
+  <div class="kpi-grid">
+    <div class="kpi green">
+      <div class="kpi-l">Peak Monthly Engagement</div>
+      <div class="kpi-v c-green">43.8%</div>
+      <div class="kpi-s">Jan-26 · 259 of 591 subscribers visited</div>
+    </div>
+    <div class="kpi blue">
+      <div class="kpi-l">Non-Visiting Members (Jan-26)</div>
+      <div class="kpi-v c-nine">332</div>
+      <div class="kpi-s">paid membership · used no chair time</div>
+    </div>
+    <div class="kpi gold">
+      <div class="kpi-l">At 4,000 Subscribers (40% rate)</div>
+      <div class="kpi-v c-gold">~1,600</div>
+      <div class="kpi-s">visits per month · manageable capacity</div>
+    </div>
+    <div class="kpi green">
+      <div class="kpi-l">Pure Membership Revenue (4,000)</div>
+      <div class="kpi-v c-green">500K SAR</div>
+      <div class="kpi-s">per year · 1,500 SAR × 4,000 · before co-pays</div>
+    </div>
+  </div>
+
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:20px 24px;margin-bottom:14px">
+    <div style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px">Monthly Engagement — Active vs Enrolled (Sep-25 to Feb-26)</div>
+    <div id="layer3_insRows"></div>
+    <div style="display:flex;gap:20px;margin-top:14px;font-size:11px;color:var(--muted)">
+      <span><span style="display:inline-block;width:10px;height:10px;background:var(--green);border-radius:2px;margin-right:5px"></span>Visited that month</span>
+      <span><span style="display:inline-block;width:10px;height:10px;background:rgba(110,118,129,.3);border-radius:2px;margin-right:5px"></span>Enrolled but did not visit — pure membership revenue</span>
+    </div>
+  </div>
+  <div class="interp green"><strong>The grey portion is money in the bank.</strong> In January 2026, 332 subscribers paid their membership and did not visit. At 1,500 SAR annual membership (125 SAR/month), that is approximately 41,500 SAR that month in revenue with zero clinical cost, zero chair time, zero materials used. This is the economic engine of Nine. The more subscribers you have, the larger this guaranteed base becomes.</div>
+
+  <div class="insight green">
+    <strong>Capacity is not a constraint on the path to 4,000 subscribers.</strong> At the current 40% monthly engagement rate, 4,000 subscribers generates ~1,600 visits per month from Nine patients. That is a significant but manageable increase from the current 238 visits. The clinic's real capacity constraint, if any, will be reached well before 4,000 subscribers — and that is a growth problem worth having. Growth should not be slowed because of capacity concerns. Capacity should be expanded to match growth.
+  </div>
+</div>
+
+<!-- IDEAL PROFILE -->
+<div class="section" id="profile">
+  <div class="s-head"><span class="s-num value">Summary</span><h2 class="s-title">Putting It Together — The Ideal Nine Subscriber Profile</h2></div>
+  <div class="s-question"><strong>Combining all three parts:</strong> Which patient profile converts well AND spends the most once subscribed? This is the profile to build marketing, referral programs, and clinical conversations around.</div>
+
+  <div class="profile-card">
+    <div class="pc-title">🎯 The Ideal Nine Subscriber Profile</div>
+    <div class="pc-grid">
+      <div class="pc-item">
+        <div class="pc-l">Nationality</div>
+        <div class="pc-v c-nine">Saudi</div>
+        <div class="pc-s">11.9% conversion · 37% higher co-pay spend</div>
+      </div>
+      <div class="pc-item">
+        <div class="pc-l">Age</div>
+        <div class="pc-v c-gold">26–35 or 46–55</div>
+        <div class="pc-s">Converts at ~11.5% · spends most on co-pays</div>
+      </div>
+      <div class="pc-item">
+        <div class="pc-l">Gender</div>
+        <div class="pc-v">Either</div>
+        <div class="pc-s">Conversion & spend gap is small · both valuable</div>
+      </div>
+      <div class="pc-item">
+        <div class="pc-l">How They Found Alba</div>
+        <div class="pc-v c-green">Any channel</div>
+        <div class="pc-s">Channel does not predict conversion · dentist does</div>
+      </div>
+      <div class="pc-item">
+        <div class="pc-l">Median Annual Value</div>
+        <div class="pc-v c-gold">5,038+ SAR</div>
+        <div class="pc-s">1,500 membership + 3,538 co-pay (full-year cohort)</div>
+      </div>
+      <div class="pc-item">
+        <div class="pc-l">Most Important Factor</div>
+        <div class="pc-v c-nine" style="font-size:14px">Dentist's pitch</div>
+        <div class="pc-s">Conversion is uniform across ages — the conversation matters most</div>
+      </div>
+    </div>
+    <div class="pc-note">
+      <strong>What this means for 2026 strategy:</strong><br><br>
+      <strong>For marketing (channels):</strong> Focus acquisition efforts on channels that bring sticky patients — doctor referrals produce the most engaged patients (42.1% return 3+ times). Building a referring physician program is the highest-quality acquisition investment available. Continue promotions for volume, but measure stickiness not just registrations.<br><br>
+      <strong>For the clinical team (conversion):</strong> Nine conversion does not vary meaningfully by age or gender — it is consistent across all adult patients. The single biggest lever to raise the overall 10.8% conversion rate is ensuring every dentist has a consistent, confident explanation of Nine and delivers it to every adult patient. A 5% improvement in conversion rate on current acquisition volume adds ~115 new Nine subscribers per year with zero additional marketing spend.<br><br>
+      <strong>For revenue maximisation:</strong> Saudi patients aged 26–35 are your highest-value subscribers. Once subscribed, they spend the most on cosmetic procedures. Treatment plan conversations, cosmetic upsells, and implant consultations should be prioritised for this segment.
+    </div>
+  </div>
+</div>
+</div>
+<div id="panel-layer4" class="layer-panel" style="display:none">
+<div class="header">
+  <div class="h-label">Layer 4 · 2026 Strategy</div>
+  <h1 class="h-title">What We Do Next</h1>
+  <div class="h-sub">Three levers, a marketing target, and a monthly subscriber plan for 2026.</div>
+
+  <div class="gap-row">
+    <div class="gap-card">
+      <div class="gc-l">Today</div>
+      <div class="gc-v c-nine">591</div>
+      <div class="gc-s">Nine subscribers · Feb-26</div>
+    </div>
+    <div class="gap-card">
+      <div class="gc-l">Goal</div>
+      <div class="gc-v c-gold">4,000</div>
+      <div class="gc-s">Target by Dec-26</div>
+    </div>
+    <div class="gap-card highlight">
+      <div class="gc-l">Gap</div>
+      <div class="gc-v" style="color:var(--red)">3,409</div>
+      <div class="gc-s">Needs 341/month · Best ever: 75</div>
+    </div>
+    <div class="gap-card">
+      <div class="gc-l">Realistic End-2026</div>
+      <div class="gc-v c-green">~1,440</div>
+      <div class="gc-s">With all three levers active</div>
+    </div>
+  </div>
+
+  <div class="note red" style="margin-top:14px">
+    <strong>The gap cannot be closed with existing processes alone.</strong> Reaching 4,000 — or getting as close as possible — requires launching a marketing campaign, executing a Group B outreach, and building B2B partnerships. All three are needed. The plan below shows when each lever activates and what it contributes.
+  </div>
+</div>
+
+<!-- LEVER 1 -->
+<div class="section" id="lever1">
+  <div class="s-head">
+    <span class="s-tag now">Lever 1 · Do This Month</span>
+    <h2 class="s-title">Call the 426 Existing Patients</h2>
+  </div>
+  <div class="s-desc">These patients are already inside Alba. They visit regularly, they spend, and they were active in the last 6 months. They do not need to be convinced to come to the clinic — they are already here. They just need to be asked to join Nine.</div>
+
+  <div class="ac">
+    <div class="ac-what">Who to call: 426 Group B patients — see Layer 2 for the full list</div>
+    <div class="ac-why">Qualification: 3+ total visits · active Aug-25 to Feb-26 · 500+ SAR paid. Median spend in this group is 4,670 SAR — already at Nine subscriber levels without a membership. Top patient paid 70,910 SAR. The conversation: <em>"You've been visiting us regularly. For 1,500 SAR per year, Nine gives you a structured program and better value."</em></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <span class="ac-result red">170 new subscribers if 40% convert</span>
+      <span class="ac-result red">255,000 SAR in membership fees</span>
+      <span class="ac-result red">Zero marketing cost</span>
+    </div>
+  </div>
+
+  <div class="note gold">
+    <strong>This is the fastest subscriber gain available.</strong> No campaign needed, no budget required. Assign the list to the front desk or patient coordinator. Target: complete all 426 calls by end of March.
+  </div>
+</div>
+
+<!-- LEVER 2 -->
+<div class="section" id="lever2">
+  <div class="s-head">
+    <span class="s-tag q2">Lever 2 · Launch Q2</span>
+    <h2 class="s-title">Marketing Campaign — Right Channel, Right Demographic</h2>
+  </div>
+  <div class="s-desc">The data tells us exactly who to target and where to find them. A campaign without this targeting wastes budget on patients who are unlikely to convert or spend.</div>
+
+  <div class="target-grid">
+    <div class="tg">
+      <div class="tg-label">Primary Target</div>
+      <div class="tg-val c-nine">Saudi · 26–35</div>
+      <div class="tg-why">Highest Nine conversion rate (11.9%) · highest co-pay spend (2,728 SAR median) · 45% spend over 3,000 SAR. This is the segment that converts and pays the most once subscribed.</div>
+    </div>
+    <div class="tg">
+      <div class="tg-label">Secondary Target</div>
+      <div class="tg-val c-nine">Saudi · 46–55</div>
+      <div class="tg-why">Second highest co-pay spend (2,488 SAR) · 43.5% spend over 3,000 SAR. Slightly smaller segment but equally valuable per subscriber. Pursue alongside the primary target.</div>
+    </div>
+    <div class="tg">
+      <div class="tg-label">Channel</div>
+      <div class="tg-val c-gold">Promotions + Google</div>
+      <div class="tg-why">Promotions has delivered 1,619 patients — the proven volume channel. Google brings smaller numbers but 84% visit rate (highest of any channel). Run promotions for volume, Google for quality. Both target the same demographic.</div>
+    </div>
+  </div>
+
+  <div class="ac">
+    <div class="ac-what">What the campaign should offer</div>
+    <div class="ac-why">Promotions that brought patients in 2025 were general — they did not specifically target Nine. The 2026 campaign should lead with Nine as the product, not general dentistry. Target Saudi adults aged 26–35 and 46–55 on Instagram and Google with a clear Nine value proposition: annual membership, full cosmetic program access, structured dental care. The 1,500 SAR annual fee is a known acceptable price point — the existing subscriber base confirms this.</div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <span class="ac-result gold">+30 Nine subscribers/month from campaign</span>
+      <span class="ac-result gold">Estimated 300 new subscribers Apr–Dec</span>
+    </div>
+  </div>
+
+  <div class="note gold">
+    <strong>Note on TikTok:</strong> TikTok was tried briefly in 2024–2025 (22 patients, 1 Nine subscriber). It was discontinued. The data does not support investing in TikTok for Nine acquisition — the engagement was low and the channel appears to have been abandoned. Stick with Promotions and Google until there is new evidence.
+  </div>
+</div>
+
+<!-- LEVER 3 -->
+<div class="section" id="lever3">
+  <div class="s-head">
+    <span class="s-tag q3">Lever 3 · Build Q3</span>
+    <h2 class="s-title">B2B Partnerships — Doctor Referrals and Corporate</h2>
+  </div>
+  <div class="s-desc">This lever takes longer to build but produces the stickiest patients. Doctor-referred patients return at twice the rate of any other channel. Corporate partnerships bring volume from defined demographic groups.</div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+    <div class="ac" style="margin-bottom:0">
+      <div class="ac-what">Doctor Referral Program</div>
+      <div class="ac-why">Only 79 of 5,453 patients (1.4%) came via doctor referral — yet these patients have the highest stickiness (43% return 3+ times). Build a formal referring physician program: identify GP clinics and specialist practices near Alba, create a referral process, offer a structured incentive. Start with 5–10 partner clinics in Q3.</div>
+      <span class="ac-result blue">Target: 30+ new patients/month from doctors by Q4</span>
+    </div>
+    <div class="ac" style="margin-bottom:0">
+      <div class="ac-what">Corporate Partnerships</div>
+      <div class="ac-why">Nine's 1,500 SAR annual fee is a natural fit for corporate employee benefit programs. Companies in Saudi Arabia offering dental coverage to employees are a direct channel to Saudi adults aged 26–45 — exactly the target demographic. Approach HR departments of mid-to-large companies in the area. A single corporate partner with 50 employees joining Nine adds 75,000 SAR in membership fees.</div>
+      <span class="ac-result blue">Target: 2–3 corporate partners by Q4 · 50–150 subscribers</span>
+    </div>
+  </div>
+
+  <div class="note blue">
+    <strong>Why Q3 and not earlier:</strong> Both programs require relationship-building time — 2–3 months to establish contacts, agree terms, and start seeing referrals. Starting the groundwork in April means the first referrals arrive by July. Trying to rush this into Q1 or Q2 produces poor-quality partnerships.
+  </div>
+</div>
+
+<!-- MONTHLY PLAN -->
+<div class="section" id="plan">
+  <div class="s-head">
+    <span class="s-tag always">Monthly Plan</span>
+    <h2 class="s-title">Subscriber Target by Month — Mar to Dec 2026</h2>
+  </div>
+  <div class="s-desc">All three levers combined. Organic = new patients converting at current 13% rate. Numbers are targets, not guarantees.</div>
+
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:14px">
+    <table class="month-table">
+      <thead>
+        <tr>
+          <th>Month</th>
+          <th>Organic</th>
+          <th>Lever 1 · Group B</th>
+          <th>Lever 2 · Campaign</th>
+          <th>Lever 3 · B2B</th>
+          <th>Total New</th>
+          <th>Running Total</th>
+        </tr>
+      </thead>
+      <tbody id="layer4_monthBody"></tbody>
+    </table>
+  </div>
+
+  <div class="cc">
+    <div class="cc-t">Projected Subscriber Growth · Mar–Dec 2026</div>
+    <div class="cc-s">All three levers active · 4,000 goal shown for reference</div>
+    <canvas id="layer4_cGrowth"></canvas>
+  </div>
+
+  <div class="note green">
+    <strong>End-2026 projection with all levers: ~1,440 subscribers.</strong> That is 2.4× today's base. It does not reach 4,000 — but it builds the foundation: a large, engaged subscriber base, a running marketing campaign, and active B2B relationships. The path to 4,000 runs through 2027, not 2026.
+  </div>
+</div>
+
+<!-- OPERATIONAL FIX -->
+<div class="section" id="ops">
+  <div class="s-head">
+    <span class="s-tag always">Fix Now</span>
+    <h2 class="s-title">One Operational Change Required</h2>
+  </div>
+
+  <div class="op">
+    <div class="op-t">Replace free-text referral source with a standard dropdown</div>
+    <div class="op-d">The current system lets staff type anything — this produced 39 different values for 8 actual channels, including 3 spellings of TikTok and vague entries like "by chance." Every marketing decision in this analysis had to work around this problem. <strong>Fix: create a dropdown with 8 standard options and make it required at registration.</strong> Takes one day. Without it, any future campaign analysis will have the same data quality issue.</div>
+  </div>
+</div>
+</div>
+
+</div>
+
+<script>
+
+function init_layer1() {
+  if (window._initialized["layer1"]) return;
+  window._initialized["layer1"] = true;
+  try {
+
+const D = {"months":["Jan-24","Feb-24","Mar-24","Apr-24","May-24","Jun-24","Jul-24","Aug-24","Sep-24","Oct-24","Nov-24","Dec-24","Jan-25","Feb-25","Mar-25","Apr-25","May-25","Jun-25","Jul-25","Aug-25","Sep-25","Oct-25","Nov-25","Dec-25","Jan-26","Feb-26"],"nine_rev":[0,200,3100,1500,1200,0,6835,12016,6370,1400,3280,4840,14360,33676,80312,67373,98520,39541,73592,180366,222030,232286,288274,368170,392308,231625],"non_nine_rev":[18207,58575,40988,52861,212418,158959,196475,229206,203340,255114,210054,271945,297370,228788,183096,322705,307143,225787,297201,314585,298810,239754,184076,285400,162144,131670],"total_rev":[18207,58775,44088,54361,213618,158959,203310,241222,209710,256514,213334,276785,311730,262464,263408,390078,405663,265328,370793,494951,520840,472040,472350,653570,554452,363295],"nine_appt":[0,2,3,3,1,6,9,14,13,9,3,18,16,90,137,123,141,84,141,277,384,473,513,632,665,564],"non_nine_appt":[70,111,133,142,362,311,346,358,320,492,442,536,579,535,469,546,591,476,684,606,515,482,364,405,338,362],"total_appt":[70,113,136,145,363,317,355,372,333,501,445,554,595,625,606,669,732,560,825,883,899,955,877,1037,1003,926],"nine_active_monthly":[0,2,2,3,1,2,5,7,6,4,3,8,8,49,62,53,54,41,58,100,140,167,182,218,259,238],"new_patients":[60,87,87,92,201,162,140,125,123,198,164,258,253,368,237,306,263,233,362,350,278,229,233,283,237,123],"new_nine":[1,1,2,1,1,2,2,4,2,0,3,4,9,51,23,37,16,19,19,68,52,51,63,75,65,19],"conversion_rate":[1.7,1.1,2.3,1.1,0.5,1.2,1.4,3.2,1.6,0,1.8,1.6,3.6,13.9,9.7,12.1,6.1,8.2,5.2,19.4,18.7,22.3,27,26.5,27.4,15.4],"rev_per_appt":[260,520,324,375,588,501,573,648,630,512,479,500,524,420,435,583,554,474,449,561,579,494,539,630,553,392],"refunds":[0,0,0,0,1500,0,2280,360,0,2414,0,0,0,1838,0,2058,0,0,5000,130,300,1995,2185,0,700,0],"nine_cumulative":[1,2,4,5,6,8,10,14,16,16,19,23,32,83,106,143,159,178,197,265,317,368,431,506,571,590],"nine_pct":[0,0.3,7,2.8,0.6,0,3.4,5,3,0.5,1.5,1.7,4.6,12.8,30.5,17.3,24.3,14.9,19.8,36.4,42.6,49.2,61,56.3,70.8,63.8]};
+
+const M = D.months;
+const fN = n => Math.round(n).toLocaleString();
+const fK = n => n>=1000000?(n/1000000).toFixed(2)+'M':n>=1000?Math.round(n/1000)+'K':Math.round(n)+'';
+
+setTimeout(()=>{ document.getElementById("layer1_pFill").style.width = (591/4000*100)+'%'; }, 400);
+
+Chart.defaults.color = '#8b949e';
+Chart.defaults.borderColor = '#21262d';
+Chart.defaults.font.family = "'Inter', -apple-system, sans-serif";
+Chart.defaults.font.size = 11;
+
+const G = { color:'rgba(33,38,45,0.8)' };
+const T = { color:'#6e7681', maxRotation:45, font:{size:10} };
+const tooltipDefaults = { bodyFont:{family:"'Inter',sans-serif",size:12}, titleFont:{family:"'Inter',sans-serif",size:12} };
+
+// 1. Revenue stacked
+new Chart(document.getElementById("layer1_cRevStacked"),{type:'bar',data:{labels:M,datasets:[
+  {label:'Nine Co-pay',data:D.nine_rev,backgroundColor:'rgba(88,166,255,0.85)',stack:'a'},
+  {label:'Regular',data:D.non_nine_rev,backgroundColor:'rgba(227,179,65,0.75)',stack:'a'}
+]},options:{responsive:true,maintainAspectRatio:true,
+  plugins:{legend:{display:false},tooltip:{...tooltipDefaults,callbacks:{label:c=>` ${c.dataset.label}: ${fN(c.raw)} SAR`}}},
+  scales:{x:{stacked:true,grid:G,ticks:T},y:{stacked:true,grid:G,ticks:{...T,callback:v=>fK(v)+' SAR'}}}}});
+
+// 2. Nine pct
+new Chart(document.getElementById("layer1_cNinePct"),{type:'line',data:{labels:M,datasets:[
+  {label:'Nine %',data:D.nine_pct,borderColor:'#58a6ff',backgroundColor:'rgba(88,166,255,0.07)',fill:true,tension:0.4,pointRadius:3,pointBackgroundColor:'#58a6ff'}
+]},options:{responsive:true,maintainAspectRatio:true,
+  plugins:{legend:{display:false},tooltip:{...tooltipDefaults,callbacks:{label:c=>` ${c.raw}%`}}},
+  scales:{x:{grid:G,ticks:T},y:{grid:G,ticks:{...T,callback:v=>v+'%'},max:100}}}});
+
+// 3. Cumulative
+new Chart(document.getElementById("layer1_cCumulative"),{type:'line',data:{labels:M,datasets:[
+  {label:'Subscribers',data:D.nine_cumulative,borderColor:'#3fb950',backgroundColor:'rgba(63,185,80,0.07)',fill:true,tension:0.4,pointRadius:3,pointBackgroundColor:'#3fb950'},
+  {label:'Goal 4,000',data:M.map(()=>4000),borderColor:'rgba(248,81,73,0.4)',borderDash:[5,4],pointRadius:0,fill:false}
+]},options:{responsive:true,maintainAspectRatio:true,
+  plugins:{legend:{display:false},tooltip:{...tooltipDefaults}},
+  scales:{x:{grid:G,ticks:T},y:{grid:G,ticks:T,max:4200}}}});
+
+// 4. Appointments stacked
+new Chart(document.getElementById("layer1_cAppts"),{type:'bar',data:{labels:M,datasets:[
+  {label:'Nine',data:D.nine_appt,backgroundColor:'rgba(88,166,255,0.85)',stack:'a'},
+  {label:'Regular',data:D.non_nine_appt,backgroundColor:'rgba(227,179,65,0.75)',stack:'a'}
+]},options:{responsive:true,maintainAspectRatio:true,
+  plugins:{legend:{display:false},tooltip:{...tooltipDefaults,callbacks:{label:c=>` ${c.dataset.label}: ${c.raw}`}}},
+  scales:{x:{stacked:true,grid:G,ticks:T},y:{stacked:true,grid:G,ticks:T}}}});
+
+// 5. Acquisition
+new Chart(document.getElementById("layer1_cAcq"),{type:'bar',data:{labels:M,datasets:[
+  {label:'New Patients',data:D.new_patients,backgroundColor:'rgba(88,166,255,0.6)',borderRadius:3}
+]},options:{responsive:true,maintainAspectRatio:true,
+  plugins:{legend:{display:false}},
+  scales:{x:{grid:G,ticks:T},y:{grid:G,ticks:T}}}});
+
+// 6. Conversion rate
+new Chart(document.getElementById("layer1_cConvRate"),{type:'line',data:{labels:M,datasets:[
+  {label:'Conv %',data:D.conversion_rate,borderColor:'#e3b341',backgroundColor:'rgba(227,179,65,0.07)',fill:true,tension:0.4,pointRadius:4,pointBackgroundColor:'#e3b341'}
+]},options:{responsive:true,maintainAspectRatio:true,
+  plugins:{legend:{display:false},tooltip:{...tooltipDefaults,callbacks:{label:c=>` ${c.raw}%`}}},
+  scales:{x:{grid:G,ticks:T},y:{grid:G,ticks:{...T,callback:v=>v+'%'}}}}});
+
+// 7. New Nine
+new Chart(document.getElementById("layer1_cNewNine"),{type:'bar',data:{labels:M,datasets:[
+  {label:'New Nine',data:D.new_nine,
+   backgroundColor:D.new_nine.map(v=>v>=50?'rgba(63,185,80,0.85)':v>=20?'rgba(88,166,255,0.8)':'rgba(88,166,255,0.3)'),
+   borderRadius:3}
+]},options:{responsive:true,maintainAspectRatio:true,
+  plugins:{legend:{display:false}},
+  scales:{x:{grid:G,ticks:T},y:{grid:G,ticks:T}}}});
+
+// 8. Rev per appt
+new Chart(document.getElementById("layer1_cRPA"),{type:'line',data:{labels:M,datasets:[
+  {label:'SAR/Appt',data:D.rev_per_appt,borderColor:'#3fb950',backgroundColor:'rgba(63,185,80,0.05)',fill:true,tension:0.4,pointRadius:4,
+   pointBackgroundColor:D.rev_per_appt.map(v=>v<420?'#f85149':'#3fb950')}
+]},options:{responsive:true,maintainAspectRatio:true,
+  plugins:{legend:{display:false},tooltip:{...tooltipDefaults,callbacks:{label:c=>` ${c.raw} SAR/appt`}}},
+  scales:{x:{grid:G,ticks:T},y:{grid:G,ticks:{...T,callback:v=>v+' SAR'}}}}});
+
+// 9. Refunds
+new Chart(document.getElementById("layer1_cRefunds"),{type:'bar',data:{labels:M,datasets:[
+  {label:'Refunds',data:D.refunds,backgroundColor:'rgba(248,81,73,0.7)',borderRadius:3}
+]},options:{responsive:true,maintainAspectRatio:true,
+  plugins:{legend:{display:false}},
+  scales:{x:{grid:G,ticks:T},y:{grid:G,ticks:{...T,callback:v=>v+' SAR'}}}}});
+
+// Table
+const tb = document.getElementById("layer1_tBody");
+M.forEach((m,i)=>{
+  const cr = D.conversion_rate[i];
+  const crBadge = cr>=20?'b-high':cr>=10?'b-med':'b-low';
+  const rpa = D.rev_per_appt[i];
+  const rpaC = rpa<420?'t-red':rpa>=580?'t-green':'';
+  tb.innerHTML += `<tr>
+    <td>${m}</td>
+    <td>${fN(D.total_rev[i])}</td>
+    <td class="t-nine">${fN(D.nine_rev[i])}</td>
+    <td>${fN(D.non_nine_rev[i])}</td>
+    <td class="t-nine">${D.nine_pct[i]}%</td>
+    <td>${D.total_appt[i]}</td>
+    <td class="t-nine">${D.nine_appt[i]}</td>
+    <td>${D.nine_active_monthly[i]}</td>
+    <td>${D.new_patients[i]}</td>
+    <td class="t-gold">${D.new_nine[i]}</td>
+    <td><span class="badge ${crBadge}">${cr}%</span></td>
+    <td class="${rpaC}">${rpa}</td>
+    <td class="t-green">${D.nine_cumulative[i]}</td>
+    <td class="${D.refunds[i]>0?'t-red':'t-muted'}">${D.refunds[i]>0?fN(D.refunds[i]):'—'}</td>
+  </tr>`;
+});
+
+  } catch(e) { console.error("Layer 1 · Baseline init error:", e); }
+}
+
+function init_layer2() {
+  if (window._initialized["layer2"]) return;
+  window._initialized["layer2"] = true;
+  try {
+
+const D = {"q1":{"groups":["Nine (A)","Treated Non-Nine (B)","Consult Only (C)"],"counts":[591,1879,2983],"median_total_visits":[6,2,0],"mean_total_visits":[7.3,4.6,0.7],"median_active_months":[2,1,0],"median_pay":[2348,560,0],"mean_pay":[3998,2866,0],"pct_zero_visits":[5.2,0.0,50.1],"last6_median_visits":[5,0,0]},"q2":{"total_nine":591,"full_year_count":60,"full_year_median_copay":3538,"full_year_mean_copay":5643,"full_year_median_ltv":5038,"full_year_mean_ltv":7143,"all_median_copay":810,"pct_zero_copay":27.6,"copay_dist":{"labels":["0 (membership only)","1–500","501–1,000","1,001–2,000","2,001–5,000","5,000+"],"values":[12,4,5,6,6,27]},"by_age":{"Under 18":{"median":460,"count":31},"18–25":{"median":849,"count":134},"26–35":{"median":1222,"count":223},"36–45":{"median":615,"count":92},"46–55":{"median":881,"count":46},"55+":{"median":657,"count":37},"Unknown":{"median":0,"count":28}},"by_ref":{"Family & Friends":{"median":720,"count":331},"Promotion":{"median":971,"count":220},"Doctor Referral":{"median":2718,"count":19},"Google":{"median":1032,"count":4},"TikTok":{"median":524,"count":1},"Instagram":{"median":0,"count":0},"Social Media":{"median":0,"count":0},"Other":{"median":915,"count":7}},"by_gender":{"female":{"median":778,"count":328},"male":{"median":932,"count":263}},"cohort_median":{"2024":820,"Early 2025":4104,"Late 2025":1388,"2026":615}},"q3":{"total":2983,"never_returned":1493,"came_back_once":1196,"engaged_3plus":76,"by_age":{"Under 18":239,"18–25":650,"26–35":981,"36–45":454,"46–55":212,"55+":218,"Unknown":229},"by_gender":{"female":1628,"male":1355},"by_nationality":{"سعودي":2508,"غير سعودي":475},"by_ref":{"Family & Friends":1828,"Promotion":1028,"Doctor Referral":33,"Google":13,"TikTok":12,"Instagram":2,"Social Media":3,"Other":64},"vs_nine_age":{"Under 18":31,"18–25":134,"26–35":223,"36–45":92,"46–55":46,"55+":37,"Unknown":28},"vs_nine_ref":{"Family & Friends":331,"Promotion":220,"Doctor Referral":19,"Google":4,"TikTok":1,"Instagram":0,"Social Media":0,"Other":16}},"q4":{"group_b_total":1879,"qualifying":426,"c1_only":864,"c2_only":729,"c3_only":1016,"c1c2":464,"median_visits":8,"median_pay":4670,"median_last6_visits":4,"median_last6_pay":1500,"by_age":{"Under 18":32,"18–25":75,"26–35":176,"36–45":48,"46–55":36,"55+":47,"Unknown":12},"by_gender":{"female":220,"male":206},"by_ref":{"Family & Friends":289,"Promotion":112,"Doctor Referral":15,"Google":1,"TikTok":1,"Instagram":0,"Social Media":0,"Other":8}}};
+
+const TARGETS = [{"file number":"2590","age":"36","gender":"female","nationality":"سعودي","referred by":"family and friends","appt_total":30,"pay_total":70910.0,"last6_appts":19,"last6_pay":34760.0},{"file number":"4928","age":"70","gender":"male","nationality":"سعودي","referred by":"family and friends","appt_total":4,"pay_total":65000.0,"last6_appts":4,"last6_pay":65000.0},{"file number":"1490","age":"57","gender":"female","nationality":"سعودي","referred by":"family and friends","appt_total":14,"pay_total":55000.0,"last6_appts":11,"last6_pay":55000.0},{"file number":"357","age":"32","gender":"male","nationality":"سعودي","referred by":"family and friends","appt_total":44,"pay_total":51000.0,"last6_appts":5,"last6_pay":6000.0},{"file number":"1032","age":"40","gender":"male","nationality":"سعودي","referred by":"family and friends","appt_total":54,"pay_total":50120.0,"last6_appts":15,"last6_pay":180.0},{"file number":"2116","age":"41","gender":"male","nationality":"سعودي","referred by":"family and friends","appt_total":35,"pay_total":46880.0,"last6_appts":19,"last6_pay":16310.0},{"file number":"5119","age":"60","gender":"male","nationality":"سعودي","referred by":"doctor another center","appt_total":3,"pay_total":42650.0,"last6_appts":3,"last6_pay":42650.0},{"file number":"1497","age":"50","gender":"female","nationality":"سعودي","referred by":"family and friends","appt_total":25,"pay_total":42070.0,"last6_appts":1,"last6_pay":0.0},{"file number":"669","age":"84","gender":"male","nationality":"سعودي","referred by":"family and friends","appt_total":28,"pay_total":40500.0,"last6_appts":1,"last6_pay":0.0},{"file number":"1653","age":"39","gender":"female","nationality":"سعودي","referred by":"family and friends","appt_total":33,"pay_total":38971.5,"last6_appts":6,"last6_pay":0.0},{"file number":"1510","age":"57","gender":"male","nationality":"سعودي","referred by":"family and friends","appt_total":45,"pay_total":37880.0,"last6_appts":1,"last6_pay":0.0},{"file number":"663","age":"42","gender":"male","nationality":"سعودي","referred by":"family and friends","appt_total":37,"pay_total":36580.0,"last6_appts":19,"last6_pay":5900.0},{"file number":"3059","age":"32","gender":"male","nationality":"سعودي","referred by":"promotion","appt_total":23,"pay_total":35645.0,"last6_appts":12,"last6_pay":26695.0},{"file number":"1085","age":"62","gender":"male","nationality":"سعودي","referred by":"family and friends","appt_total":46,"pay_total":34210.0,"last6_appts":10,"last6_pay":8500.0},{"file number":"870","age":"46","gender":"male","nationality":"سعودي","referred by":"family and friends","appt_total":32,"pay_total":33645.0,"last6_appts":9,"last6_pay":8045.0},{"file number":"3040","age":"67","gender":"female","nationality":"سعودي","referred by":"family and friends","appt_total":22,"pay_total":32880.0,"last6_appts":5,"last6_pay":10830.0},{"file number":"1355","age":"48","gender":"female","nationality":"سعودي","referred by":"family and friends","appt_total":6,"pay_total":32649.0,"last6_appts":4,"last6_pay":32500.0},{"file number":"1830","age":"31","gender":"male","nationality":"سعودي","referred by":"family and friends","appt_total":30,"pay_total":31510.0,"last6_appts":8,"last6_pay":10900.0},{"file number":"1512","age":"46","gender":"male","nationality":"سعودي","referred by":"family and friends","appt_total":22,"pay_total":31470.0,"last6_appts":5,"last6_pay":5500.0},{"file number":"138","age":"58","gender":"female","nationality":"سعودي","referred by":"family and friends","appt_total":17,"pay_total":31190.0,"last6_appts":5,"last6_pay":1290.0}];
+
+const fN = n => Math.round(n).toLocaleString();
+Chart.defaults.color='#8b949e';
+Chart.defaults.borderColor='#21262d';
+Chart.defaults.font.family="'Inter',-apple-system,sans-serif";
+Chart.defaults.font.size=11;
+const G={color:'rgba(33,38,45,.8)'};
+const T={color:'#6e7681',maxRotation:35,font:{size:10}};
+const TT={bodyFont:{family:"'Inter',sans-serif",size:12},titleFont:{family:"'Inter',sans-serif",size:12}};
+
+// Q1 charts
+new Chart(document.getElementById("layer2_cVisits"),{type:'bar',data:{labels:D.q1.groups,datasets:[
+  {label:'Median Visits',data:D.q1.median_total_visits,backgroundColor:['rgba(88,166,255,.85)','rgba(227,179,65,.85)','rgba(110,118,129,.6)'],borderRadius:4}
+]},options:{responsive:true,plugins:{legend:{display:false},tooltip:{...TT}},scales:{x:{grid:G,ticks:T},y:{grid:G,ticks:T}}}});
+
+new Chart(document.getElementById("layer2_cSpend"),{type:'bar',data:{labels:D.q1.groups,datasets:[
+  {label:'Median Co-pay SAR',data:D.q1.median_pay,backgroundColor:['rgba(88,166,255,.85)','rgba(227,179,65,.85)','rgba(110,118,129,.6)'],borderRadius:4}
+]},options:{responsive:true,plugins:{legend:{display:false},tooltip:{...TT,callbacks:{label:c=>` ${fN(c.raw)} SAR`}}},scales:{x:{grid:G,ticks:T},y:{grid:G,ticks:{...T,callback:v=>fN(v)+' SAR'}}}}});
+
+// Q2 charts
+new Chart(document.getElementById("layer2_cCopayDist"),{type:'bar',data:{labels:D.q2.copay_dist.labels,datasets:[
+  {label:'Subscribers',data:D.q2.copay_dist.values,backgroundColor:['rgba(248,81,73,.7)','rgba(88,166,255,.5)','rgba(88,166,255,.65)','rgba(88,166,255,.8)','rgba(63,185,80,.75)','rgba(63,185,80,.9)'],borderRadius:4}
+]},options:{responsive:true,plugins:{legend:{display:false},tooltip:{...TT}},scales:{x:{grid:G,ticks:{...T,maxRotation:45}},y:{grid:G,ticks:T}}}});
+
+new Chart(document.getElementById("layer2_cCohort"),{type:'bar',data:{labels:Object.keys(D.q2.cohort_median),datasets:[
+  {label:'Median Co-pay SAR',data:Object.values(D.q2.cohort_median),backgroundColor:['rgba(110,118,129,.6)','rgba(63,185,80,.85)','rgba(88,166,255,.75)','rgba(227,179,65,.6)'],borderRadius:4}
+]},options:{responsive:true,plugins:{legend:{display:false},tooltip:{...TT,callbacks:{label:c=>` ${fN(c.raw)} SAR`}}},scales:{x:{grid:G,ticks:T},y:{grid:G,ticks:{...T,callback:v=>fN(v)+' SAR'}}}}});
+
+// Q2 by ref
+const refKeys=['Family & Friends','Promotion','Doctor Referral','Google','Other'];
+new Chart(document.getElementById("layer2_cByRef"),{type:'bar',data:{labels:refKeys,datasets:[
+  {label:'Median Co-pay',data:refKeys.map(r=>D.q2.by_ref[r]?.median||0),
+   backgroundColor:refKeys.map(r=>D.q2.by_ref[r]?.median>2000?'rgba(63,185,80,.85)':D.q2.by_ref[r]?.median>900?'rgba(88,166,255,.75)':'rgba(110,118,129,.5)'),borderRadius:3}
+]},options:{indexAxis:'y',responsive:true,plugins:{legend:{display:false},tooltip:{...TT,callbacks:{label:c=>` ${fN(c.raw)} SAR`}}},scales:{x:{grid:G,ticks:{...T,callback:v=>fN(v)+' SAR'}},y:{grid:G,ticks:{...T,font:{size:10}}}}}});
+
+const ageKeys=['Under 18','18–25','26–35','36–45','46–55','55+'];
+new Chart(document.getElementById("layer2_cByAge"),{type:'bar',data:{labels:ageKeys,datasets:[
+  {label:'Median Co-pay',data:ageKeys.map(a=>D.q2.by_age[a]?.median||0),
+   backgroundColor:ageKeys.map(a=>D.q2.by_age[a]?.median>=1200?'rgba(63,185,80,.85)':D.q2.by_age[a]?.median>=800?'rgba(88,166,255,.75)':'rgba(110,118,129,.5)'),borderRadius:3}
+]},options:{indexAxis:'y',responsive:true,plugins:{legend:{display:false},tooltip:{...TT,callbacks:{label:c=>` ${fN(c.raw)} SAR`}}},scales:{x:{grid:G,ticks:{...T,callback:v=>fN(v)+' SAR'}},y:{grid:G,ticks:T}}}});
+
+// Q3 age comparison
+const ageO=['Under 18','18–25','26–35','36–45','46–55','55+','Unknown'];
+const cTotal=Object.values(D.q3.by_age).reduce((a,b)=>a+b,0);
+const aTotal=Object.values(D.q3.vs_nine_age).reduce((a,b)=>a+b,0);
+new Chart(document.getElementById("layer2_cAgeComp"),{type:'bar',data:{labels:ageO,datasets:[
+  {label:'Group C %',data:ageO.map(a=>+(D.q3.by_age[a]/cTotal*100).toFixed(1)),backgroundColor:'rgba(110,118,129,.6)',borderRadius:3},
+  {label:'Nine %',data:ageO.map(a=>+(D.q3.vs_nine_age[a]/aTotal*100).toFixed(1)),backgroundColor:'rgba(88,166,255,.75)',borderRadius:3}
+]},options:{responsive:true,plugins:{legend:{labels:{color:'#8b949e'}},tooltip:{...TT,callbacks:{label:c=>` ${c.dataset.label}: ${c.raw}%`}}},scales:{x:{grid:G,ticks:T},y:{grid:G,ticks:{...T,callback:v=>v+'%'}}}}});
+
+const refO=['Family & Friends','Promotion','Doctor Referral','Other'];
+const rcTotal=Object.values(D.q3.by_ref).reduce((a,b)=>a+b,0);
+const raTotal=Object.values(D.q3.vs_nine_ref).reduce((a,b)=>a+b,0);
+new Chart(document.getElementById("layer2_cRefComp"),{type:'bar',data:{labels:refO,datasets:[
+  {label:'Group C %',data:refO.map(r=>+((D.q3.by_ref[r]||0)/rcTotal*100).toFixed(1)),backgroundColor:'rgba(110,118,129,.6)',borderRadius:3},
+  {label:'Nine %',data:refO.map(r=>+((D.q3.vs_nine_ref[r]||0)/raTotal*100).toFixed(1)),backgroundColor:'rgba(88,166,255,.75)',borderRadius:3}
+]},options:{responsive:true,plugins:{legend:{labels:{color:'#8b949e'}},tooltip:{...TT,callbacks:{label:c=>` ${c.dataset.label}: ${c.raw}%`}}},scales:{x:{grid:G,ticks:T},y:{grid:G,ticks:{...T,callback:v=>v+'%'}}}}});
+
+new Chart(document.getElementById("layer2_cGenderC"),{type:'doughnut',data:{labels:['Female','Male'],datasets:[{data:[D.q3.by_gender.female,D.q3.by_gender.male],backgroundColor:['rgba(188,140,255,.85)','rgba(88,166,255,.75)'],borderWidth:0,hoverOffset:4}]},options:{responsive:true,plugins:{legend:{position:'bottom',labels:{color:'#8b949e',padding:16}},tooltip:{...TT,callbacks:{label:c=>{const t=c.dataset.data.reduce((a,b)=>a+b,0);return ` ${c.label}: ${c.raw} (${(c.raw/t*100).toFixed(1)}%)`}}}}}});
+new Chart(document.getElementById("layer2_cNatC"),{type:'doughnut',data:{labels:['Saudi','Non-Saudi'],datasets:[{data:[D.q3.by_nationality['سعودي'],D.q3.by_nationality['غير سعودي']],backgroundColor:['rgba(63,185,80,.85)','rgba(227,179,65,.75)'],borderWidth:0,hoverOffset:4}]},options:{responsive:true,plugins:{legend:{position:'bottom',labels:{color:'#8b949e',padding:16}},tooltip:{...TT,callbacks:{label:c=>{const t=c.dataset.data.reduce((a,b)=>a+b,0);return ` ${c.label}: ${c.raw} (${(c.raw/t*100).toFixed(1)}%)`}}}}}});
+
+// Q4 charts
+new Chart(document.getElementById("layer2_cTargetAge"),{type:'bar',data:{labels:ageO.filter(a=>a!=='Unknown'),datasets:[
+  {label:'Targets',data:ageO.filter(a=>a!=='Unknown').map(a=>D.q4.by_age[a]||0),
+   backgroundColor:'rgba(63,185,80,.8)',borderRadius:4}
+]},options:{responsive:true,plugins:{legend:{display:false}},scales:{x:{grid:G,ticks:T},y:{grid:G,ticks:T}}}});
+
+new Chart(document.getElementById("layer2_cTargetRef"),{type:'bar',data:{labels:refO,datasets:[
+  {label:'Targets',data:refO.map(r=>D.q4.by_ref[r]||0),
+   backgroundColor:'rgba(63,185,80,.8)',borderRadius:4}
+]},options:{responsive:true,plugins:{legend:{display:false}},scales:{x:{grid:G,ticks:T},y:{grid:G,ticks:T}}}});
+
+// Target table
+function priority(t){
+  if(t.last6_appts>=5&&t.pay_total>=10000) return '<span class="pri pri-hot">🔥 Hot</span>';
+  if(t.last6_appts>=3&&t.pay_total>=3000) return '<span class="pri pri-warm">Warm</span>';
+  return '<span class="pri pri-cool">Active</span>';
+}
+function renderTable(data){
+  const tb=document.getElementById("layer2_targetBody");
+  tb.innerHTML='';
+  data.forEach(t=>{
+    tb.innerHTML+=`<tr>
+      <td>${t['file number']}</td>
+      <td>${t.age}</td>
+      <td>${t.gender}</td>
+      <td>${t.nationality}</td>
+      <td style="text-align:left;max-width:150px;overflow:hidden;text-overflow:ellipsis">${t['referred by']}</td>
+      <td class="t-nine">${t.appt_total}</td>
+      <td class="t-gold">${fN(t.pay_total)}</td>
+      <td class="t-green">${t.last6_appts}</td>
+      <td>${fN(t.last6_pay)}</td>
+      <td>${priority(t)}</td>
+    </tr>`;
+  });
+  document.getElementById("layer2_filterCount").textContent=`Showing ${data.length} patients`;
+}
+renderTable(TARGETS);
+function filterTable(){
+  const q=document.getElementById("layer2_searchInput").value.toLowerCase();
+  const filtered=TARGETS.filter(t=>
+    t['file number'].toLowerCase().includes(q)||
+    String(t.age).includes(q)||
+    t.gender.toLowerCase().includes(q)||
+    t['referred by'].toLowerCase().includes(q)
+  );
+  renderTable(filtered);
+}
+
+  } catch(e) { console.error("Layer 2 · Behavior init error:", e); }
+}
+
+function init_layer3() {
+  if (window._initialized["layer3"]) return;
+  window._initialized["layer3"] = true;
+  try {
+
+const CHAN = {"Family & Friends":{"total":3591,"pct_of_all":65.9,"visited":2699,"pct_visited":75.2,"stayed_3plus":996,"pct_stayed":27.7},"Promotion":{"total":1619,"pct_of_all":29.7,"visited":1040,"pct_visited":64.2,"stayed_3plus":327,"pct_stayed":20.2},"Doctor Referral":{"total":79,"pct_of_all":1.4,"visited":61,"pct_visited":77.2,"stayed_3plus":34,"pct_stayed":43.0},"Google":{"total":37,"pct_of_all":0.7,"visited":31,"pct_visited":83.8,"stayed_3plus":10,"pct_stayed":27.0},"Neighbor / Walk-in":{"total":41,"pct_of_all":0.8,"visited":34,"pct_visited":82.9,"stayed_3plus":6,"pct_stayed":14.6},"TikTok (trial)":{"total":22,"pct_of_all":0.4,"visited":15,"pct_visited":68.2,"stayed_3plus":5,"pct_stayed":22.7},"Other":{"total":58,"pct_of_all":1.1,"visited":44,"pct_visited":75.9,"stayed_3plus":12,"pct_stayed":20.7}};
+const AGECONV = {"Under 18":{"total":415,"nine":31,"conv_rate":7.5},"18–25":{"total":1159,"nine":134,"conv_rate":11.6},"26–35":{"total":1948,"nine":223,"conv_rate":11.4},"36–45":{"total":852,"nine":92,"conv_rate":10.8},"46–55":{"total":395,"nine":46,"conv_rate":11.6},"55+":{"total":377,"nine":37,"conv_rate":9.8}};
+const NATCONV = {"سعودي":{"total":4696,"nine":560,"conv_rate":11.9},"غير سعودي":{"total":757,"nine":31,"conv_rate":4.1}};
+const AGEVAL = {"Under 18":{"count":31,"median":1960,"pct_high":16.1},"18–25":{"count":134,"median":2423,"pct_high":38.8},"26–35":{"count":223,"median":2728,"pct_high":45.3},"36–45":{"count":92,"median":2184,"pct_high":34.8},"46–55":{"count":46,"median":2488,"pct_high":43.5},"55+":{"count":37,"median":2157,"pct_high":27.0}};
+const GENVAL = {"female":{"count":328,"median":2305,"pct_high":37.5},"male":{"count":263,"median":2432,"pct_high":39.9}};
+const NATVAL = {"سعودي":{"count":560,"median":2364},"غير سعودي":{"count":31,"median":1725}};
+const ENG = {"Sep-25":{"active":140,"total":591,"pct":23.7,"revenue":222030},"Oct-25":{"active":167,"total":591,"pct":28.3,"revenue":232286},"Nov-25":{"active":182,"total":591,"pct":30.8,"revenue":288274},"Dec-25":{"active":218,"total":591,"pct":36.9,"revenue":368170},"Jan-26":{"active":259,"total":591,"pct":43.8,"revenue":392308},"Feb-26":{"active":238,"total":591,"pct":40.3,"revenue":231625}};
+
+const fN = n => Math.round(n).toLocaleString();
+Chart.defaults.color='#8b949e';
+Chart.defaults.borderColor='#21262d';
+Chart.defaults.font.family="'Inter',-apple-system,sans-serif";
+Chart.defaults.font.size=11;
+const G={color:'rgba(33,38,45,.8)'};
+const T={color:'#6e7681',maxRotation:35,font:{size:10}};
+const TT={bodyFont:{family:"'Inter',sans-serif",size:12},titleFont:{family:"'Inter',sans-serif",size:12}};
+
+// Channel table
+const chanOrder = ['Family & Friends','Promotion','Doctor Referral','Google','Neighbor / Walk-in','TikTok (trial)','Other'];
+const tb = document.getElementById("layer3_chanBody");
+chanOrder.forEach(ch => {
+  const d = CHAN[ch];
+  const stickBadge = d.pct_stayed>=35?'<span class="badge b-high">High ↑</span>':d.pct_stayed>=22?'<span class="badge b-med">Medium</span>':d.pct_stayed==0?'<span class="badge b-low">No data</span>':'<span class="badge b-low">Low</span>';
+  tb.innerHTML += `<tr>
+    <td><strong>${ch}</strong>${ch.includes('TikTok')?'<span style="font-size:10px;color:var(--dim);margin-left:6px">· staff-recorded · unvalidated</span>':''}</td>
+    <td>${fN(d.total)}</td>
+    <td>${(d.total/5453*100).toFixed(1)}%</td>
+    <td>${fN(d.visited)} (${d.pct_visited}%)</td>
+    <td>${fN(d.stayed_3plus)} (${d.pct_stayed}%)</td>
+    <td>${stickBadge}</td>
+  </tr>`;
+});
+
+// Channel volume
+new Chart(document.getElementById("layer3_cChanVol"),{type:'bar',data:{labels:chanOrder,datasets:[{label:'Patients',data:chanOrder.map(c=>CHAN[c].total),backgroundColor:chanOrder.map(c=>c==='Family & Friends'?'rgba(227,179,65,.8)':c==='Promotion'?'rgba(88,166,255,.7)':c==='Doctor Referral'?'rgba(63,185,80,.8)':'rgba(110,118,129,.5)'),borderRadius:4}]},options:{responsive:true,plugins:{legend:{display:false},tooltip:{...TT}},scales:{x:{grid:G,ticks:{...T,maxRotation:45}},y:{grid:G,ticks:T}}}});
+
+// Stickiness
+new Chart(document.getElementById("layer3_cChanStick"),{type:'bar',data:{labels:chanOrder,datasets:[{label:'% Returned 3+ times',data:chanOrder.map(c=>CHAN[c].pct_stayed),backgroundColor:chanOrder.map(c=>CHAN[c].pct_stayed>=35?'rgba(63,185,80,.85)':CHAN[c].pct_stayed>=22?'rgba(88,166,255,.7)':'rgba(110,118,129,.5)'),borderRadius:4}]},options:{responsive:true,plugins:{legend:{display:false},tooltip:{...TT,callbacks:{label:c=>` ${c.raw}%`}}},scales:{x:{grid:G,ticks:{...T,maxRotation:45}},y:{grid:G,ticks:{...T,callback:v=>v+'%'},max:50}}}});
+
+// Age conversion
+const ageKeys = ['Under 18','18–25','26–35','36–45','46–55','55+'];
+new Chart(document.getElementById("layer3_cAgeConv"),{type:'bar',data:{labels:ageKeys,datasets:[{label:'Conversion %',data:ageKeys.map(a=>AGECONV[a].conv_rate),backgroundColor:ageKeys.map(a=>a==='Under 18'?'rgba(110,118,129,.5)':'rgba(88,166,255,.75)'),borderRadius:4}]},options:{responsive:true,plugins:{legend:{display:false},tooltip:{...TT,callbacks:{label:c=>` ${c.raw}%`}}},scales:{x:{grid:G,ticks:T},y:{grid:G,ticks:{...T,callback:v=>v+'%'},min:0,max:16}}}});
+
+// Nationality conversion
+new Chart(document.getElementById("layer3_cNatConv"),{type:'bar',data:{labels:['Saudi (4,696 patients)','Non-Saudi (757 patients)'],datasets:[{label:'Conversion %',data:[NATCONV['سعودي'].conv_rate,NATCONV['غير سعودي'].conv_rate],backgroundColor:['rgba(63,185,80,.8)','rgba(110,118,129,.55)'],borderRadius:4}]},options:{responsive:true,plugins:{legend:{display:false},tooltip:{...TT,callbacks:{label:c=>` ${c.raw}%`}}},scales:{x:{grid:G,ticks:T},y:{grid:G,ticks:{...T,callback:v=>v+'%'},max:16}}}});
+
+// Age value
+new Chart(document.getElementById("layer3_cAgeVal"),{type:'bar',data:{labels:ageKeys,datasets:[{label:'Median Co-pay SAR',data:ageKeys.map(a=>AGEVAL[a].median),backgroundColor:ageKeys.map(a=>AGEVAL[a].median>=2700?'rgba(227,179,65,.9)':AGEVAL[a].median>=2300?'rgba(88,166,255,.75)':'rgba(110,118,129,.5)'),borderRadius:4}]},options:{responsive:true,plugins:{legend:{display:false},tooltip:{...TT,callbacks:{label:c=>` ${fN(c.raw)} SAR`}}},scales:{x:{grid:G,ticks:T},y:{grid:G,ticks:{...T,callback:v=>fN(v)+' SAR'},min:1500}}}});
+
+// High spenders
+new Chart(document.getElementById("layer3_cHighSpend"),{type:'bar',data:{labels:ageKeys,datasets:[{label:'% Over 3,000 SAR',data:ageKeys.map(a=>AGEVAL[a].pct_high),backgroundColor:ageKeys.map(a=>AGEVAL[a].pct_high>=40?'rgba(63,185,80,.85)':AGEVAL[a].pct_high>=30?'rgba(88,166,255,.75)':'rgba(110,118,129,.5)'),borderRadius:4}]},options:{responsive:true,plugins:{legend:{display:false},tooltip:{...TT,callbacks:{label:c=>` ${c.raw}%`}}},scales:{x:{grid:G,ticks:T},y:{grid:G,ticks:{...T,callback:v=>v+'%'},max:55}}}});
+
+// Gender + nationality combined
+new Chart(document.getElementById("layer3_cGenNat"),{type:'bar',data:{
+  labels:['Female','Male','Saudi','Non-Saudi'],
+  datasets:[{label:'Median Co-pay SAR',data:[GENVAL.female.median,GENVAL.male.median,NATVAL['سعودي'].median,NATVAL['غير سعودي'].median],backgroundColor:['rgba(188,140,255,.7)','rgba(88,166,255,.7)','rgba(63,185,80,.75)','rgba(110,118,129,.5)'],borderRadius:4}]
+},options:{responsive:true,plugins:{legend:{display:false},tooltip:{...TT,callbacks:{label:c=>` ${fN(c.raw)} SAR`}}},scales:{x:{grid:G,ticks:T},y:{grid:G,ticks:{...T,callback:v=>fN(v)+' SAR'},min:1000}}}});
+
+// Insurance rows
+const engMonths = Object.keys(ENG);
+const insDiv = document.getElementById("layer3_insRows");
+engMonths.forEach(m => {
+  const e = ENG[m];
+  const pct = e.pct;
+  const col = pct>=40?'#3fb950':pct>=30?'#58a6ff':'#8b949e';
+  insDiv.innerHTML += `<div class="ins-row">
+    <span class="ins-m">${m}</span>
+    <div class="ins-track">
+      <div class="ins-active" style="width:${pct}%;background:${col}">${e.active}</div>
+      <div class="ins-rest" style="width:${100-pct}%"></div>
+    </div>
+    <span class="ins-stat" style="color:${col}">${pct}%</span>
+    <span class="ins-rev">${fN(e.revenue)} SAR</span>
+  </div>`;
+});
+
+  } catch(e) { console.error("Layer 3 · Segments init error:", e); }
+}
+
+function init_layer4() {
+  if (window._initialized["layer4"]) return;
+  window._initialized["layer4"] = true;
+  try {
+
+const MONTHS = ['Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const DATA = [
+  {m:'Mar', org:32, b:85,  camp:0,  b2b:0},
+  {m:'Apr', org:32, b:85,  camp:30, b2b:0},
+  {m:'May', org:32, b:0,   camp:30, b2b:0},
+  {m:'Jun', org:32, b:0,   camp:30, b2b:0},
+  {m:'Jul', org:32, b:0,   camp:30, b2b:15},
+  {m:'Aug', org:32, b:0,   camp:30, b2b:15},
+  {m:'Sep', org:32, b:0,   camp:30, b2b:15},
+  {m:'Oct', org:32, b:0,   camp:30, b2b:15},
+  {m:'Nov', org:32, b:0,   camp:30, b2b:15},
+  {m:'Dec', org:32, b:0,   camp:30, b2b:15},
+];
+
+const fN = n => n.toLocaleString();
+Chart.defaults.color='#8b949e';
+Chart.defaults.borderColor='#21262d';
+Chart.defaults.font.family="'Inter',-apple-system,sans-serif";
+Chart.defaults.font.size=11;
+
+// Build table
+const tb = document.getElementById("layer4_monthBody");
+let running = 591;
+const runningArr = [];
+DATA.forEach((d,i) => {
+  const total = d.org + d.b + d.camp + d.b2b;
+  running += total;
+  runningArr.push(running);
+  const isLast = i === DATA.length-1;
+  tb.innerHTML += `<tr>
+    <td>${d.m}</td>
+    <td class="t-dim">${d.org}</td>
+    <td class="${d.b>0?'t-red':'t-dim'}">${d.b>0?d.b:'—'}</td>
+    <td class="${d.camp>0?'t-gold':'t-dim'}">${d.camp>0?d.camp:'—'}</td>
+    <td class="${d.b2b>0?'t-blue':'t-dim'}">${d.b2b>0?d.b2b:'—'}</td>
+    <td style="font-weight:600">${total}</td>
+    <td style="font-weight:700;color:${running>=1200?'#3fb950':running>=900?'#58a6ff':'#e3b341'}">${fN(running)}</td>
+  </tr>`;
+});
+
+// Chart
+const G={color:'rgba(33,38,45,.8)'};
+const T={color:'#6e7681',font:{size:10}};
+
+new Chart(document.getElementById("layer4_cGrowth"),{
+  type:'line',
+  data:{
+    labels:MONTHS,
+    datasets:[
+      {
+        label:'Projected subscribers',
+        data:runningArr,
+        borderColor:'rgba(63,185,80,.9)',
+        backgroundColor:'rgba(63,185,80,.07)',
+        borderWidth:2.5,
+        pointRadius:4,
+        pointBackgroundColor:'rgba(63,185,80,.9)',
+        tension:.3,
+        fill:true
+      },
+      {
+        label:'4,000 goal',
+        data:Array(10).fill(4000),
+        borderColor:'rgba(248,81,73,.35)',
+        backgroundColor:'transparent',
+        borderWidth:1.5,
+        borderDash:[6,4],
+        pointRadius:0
+      }
+    ]
+  },
+  options:{
+    responsive:true,
+    plugins:{
+      legend:{labels:{color:'#8b949e',padding:16}},
+      tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${fN(c.raw)}`}}
+    },
+    scales:{
+      x:{grid:G,ticks:T},
+      y:{grid:G,ticks:{...T,callback:v=>fN(v)},min:500,max:4200,
+        afterDataLimits(scale){scale.max=4200}}
+    }
+  }
+});
+
+  } catch(e) { console.error("Layer 4 · Strategy init error:", e); }
+}
+
+
+window._initialized = {};
+document.addEventListener("DOMContentLoaded", function() { init_layer1(); });
+
+
+function switchTab(id) {
+  document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+  document.querySelectorAll(".layer-panel").forEach(p => p.style.display = "none");
+  document.querySelector("[data-tab=" + id + "]").classList.add("active");
+  document.getElementById("panel-" + id).style.display = "block";
+  window.scrollTo({top:0,behavior:"smooth"});
+  // Init charts for this layer on first view
+  const initFn = window["init_" + id];
+  if (initFn) initFn();
+}
+</script>
+</body>
+</html>
